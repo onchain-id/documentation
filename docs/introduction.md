@@ -8,7 +8,7 @@ Their *address* is a unique identifier that can safely be used by service provid
 
 [**Claims**](identities/claims.md) can be attached to prove compliance with a tokenized asset requirements.
 
-An InvestorID identity allow an investor to truly own its identity, whilst allowing trusted services to emit claims for it. The data associated with the identity and its claims are under the control of the investor who can share them with other service providers.
+An InvestorID identity allows an investor to truly own its identity, whilst allowing trusted services to emit claims for it. The data associated with the identity and its claims are under the control of the investor who can share them with other service providers.
 
 They are fully compatible with every security token based on the [T-REX standard](https://github.com/TokenySolutions/T-REX) (Token for Regulated EXchanges).
 

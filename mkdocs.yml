@@ -54,5 +54,9 @@ nav:
       - The Identity SDK:
         - Home: developers/sdks/identity-sdk/identity-sdk.md
         - Get Started: developers/sdks/identity-sdk/get-started.md
+        - Configuration: developers/sdks/identity-sdk/configuration.md
+        - BlockChain Providers: developers/sdks/identity-sdk/blockchain-providers.md
+        - Signing Challenges: developers/sdks/identity-sdk/signer-module.md
+        - Examples: developers/sdks/identity-sdk/examples.md
   - About:
     - License: license.md
