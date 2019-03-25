@@ -71,6 +71,8 @@
     
       <link rel="stylesheet" href="../stylesheets/extra.css">
     
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
     
       
     
@@ -290,6 +292,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-should-be-expected-of-this-documentation" title="What should be expected of this documentation?" class="md-nav__link">
+    What should be expected of this documentation?
+  </a>
+  
+</li>
+      
       
       
       
@@ -431,10 +440,118 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
-      About
+      Developers
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-5">
+        Developers
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developers/developers/" title="Developers HomePage" class="md-nav__link">
+      Developers HomePage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+    
+    <label class="md-nav__link" for="nav-5-2">
+      SDKs
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-2">
+        SDKs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2-1" type="checkbox" id="nav-5-2-1">
+    
+    <label class="md-nav__link" for="nav-5-2-1">
+      The Identity SDK
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-5-2-1">
+        The Identity SDK
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developers/sdks/identity-sdk/identity-sdk/" title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developers/sdks/identity-sdk/get-started/" title="Get Started" class="md-nav__link">
+      Get Started
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
         About
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -484,6 +601,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-should-be-expected-of-this-documentation" title="What should be expected of this documentation?" class="md-nav__link">
+    What should be expected of this documentation?
+  </a>
+  
+</li>
+      
       
       
       
@@ -505,6 +629,20 @@
                 
                 <h1 id="identity-ecosystem-for-digital-assets-holders">Identity ecosystem for digital assets holders</h1>
 <h2 id="what-is-investorid">What is InvestorID?</h2>
+<p><strong>InvestorID identities</strong> are smart contracts deployed on the <a href="../blockchain/core-concepts/"><em>BlockChain</em></a>.</p>
+<p>Their <em>address</em> is a unique identifier that can safely be used by service provider to identify their owner, and even to sign challenges like <a href="../identities/connect-with-identity/"><em>direct authentication on a website</em></a>.</p>
+<p><a href="../identities/claims/"><strong>Claims</strong></a> can be attached to prove compliance with a tokenized asset requirements.</p>
+<p>An InvestorID identity allow an investor to truly own its identity, whilst allowing trusted services to emit claims for it. The data associated with the identity and its claims are under the control of the investor who can share them with other service providers.</p>
+<p>They are fully compatible with every security token based on the <a href="https://github.com/TokenySolutions/T-REX">T-REX standard</a> (Token for Regulated EXchanges).</p>
+<p align="center">
+  <a href="https://tokeny.com/t-rex-whitepaper/">
+  <img src="/images/T-REX.png" width="150" title="t-rex">
+  </a>
+</p>
+
+<h2 id="what-should-be-expected-of-this-documentation">What should be expected of this documentation?</h2>
+<p>This documentation introduces the concept of a BlockChain Identity, and demonstrate some of its use-case.
+It also contains the documentation for several tools related to InvestorID Identities such as the <a href="../developers/sdks/identity-sdk/identity-sdk/">Identity SDK</a>.</p>
                 
                   
                 
@@ -588,6 +726,8 @@
       <script src="../assets/javascripts/application.2ba8dec4.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
       
     
   </body>

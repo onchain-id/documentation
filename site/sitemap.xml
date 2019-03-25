@@ -41,6 +41,21 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://investorid.org/developers/developers/</loc>
+     <lastmod>2019-03-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://investorid.org/developers/sdks/identity-sdk/identity-sdk/</loc>
+     <lastmod>2019-03-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://investorid.org/developers/sdks/identity-sdk/get-started/</loc>
+     <lastmod>2019-03-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://investorid.org/license/</loc>
      <lastmod>2019-03-25</lastmod>
      <changefreq>daily</changefreq>
