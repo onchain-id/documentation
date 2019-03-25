@@ -1,0 +1,58 @@
+site_name: InvestorID Documentation
+site_description: 'Official documentation for the InvestorID solution, an Identity ecosystem for digital assets holders to create blockchain identities to access and trade compliant digital assets.'
+site_author: 'InvestorID Organization'
+site_url: 'https://investorid.org'
+copyright: 'Copyright &copy; 2019 - Investor ID'
+repo_name: 'investorid/documentation'
+repo_url: 'https://github.com/investorid/documentation'
+theme:
+  name: 'material'
+  palette:
+    primary: 'Blue Grey'
+    accent: 'Indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  logo:
+    icon: 'chrome_reader_mode'
+  language: 'en'
+  favicon: 'images/InvestorID_icon.png'
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/InvestorID'
+  links:
+    investorid: 'http://investorid.org'
+extra_css:
+  - 'stylesheets/extra.css'
+  - 'https://unpkg.com/mermaid@7.1.2/dist/mermaid.css'
+extra_javascript:
+  - 'https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+plugins:
+  - search
+  - markdownextradata
+nav:
+  - Home: index.md
+  - Introduction: introduction.md
+  - BlockChain:
+    - Main concepts: blockchain/core-concepts.md
+  - Identities:
+    - What is an Identity: identities/introduction.md
+    - Basic Information: identities/information.md
+    - Claims: identities/claims.md
+    - Connect with your Identity: identities/connect-with-identity.md
+    - Controlling your data: identities/grants.md
+  - Developers:
+    - Developers HomePage: developers/developers.md
+    - SDKs:
+      - The Identity SDK:
+        - Home: developers/sdks/identity-sdk/identity-sdk.md
+        - Get Started: developers/sdks/identity-sdk/get-started.md
+  - About:
+    - License: license.md
