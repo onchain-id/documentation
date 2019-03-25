@@ -56,6 +56,26 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://investorid.org/developers/sdks/identity-sdk/configuration/</loc>
+     <lastmod>2019-03-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://investorid.org/developers/sdks/identity-sdk/blockchain-providers/</loc>
+     <lastmod>2019-03-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://investorid.org/developers/sdks/identity-sdk/signer-module/</loc>
+     <lastmod>2019-03-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://investorid.org/developers/sdks/identity-sdk/examples/</loc>
+     <lastmod>2019-03-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://investorid.org/license/</loc>
      <lastmod>2019-03-25</lastmod>
      <changefreq>daily</changefreq>

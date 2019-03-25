@@ -112,6 +112,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#the-identity-sdk" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -467,6 +471,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
     <a href="./" title="Home" class="md-nav__link md-nav__link--active">
       Home
@@ -483,6 +489,54 @@
   <li class="md-nav__item">
     <a href="../get-started/" title="Get Started" class="md-nav__link">
       Get Started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../blockchain-providers/" title="BlockChain Providers" class="md-nav__link">
+      BlockChain Providers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../signer-module/" title="Signing Challenges" class="md-nav__link">
+      Signing Challenges
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../examples/" title="Examples" class="md-nav__link">
+      Examples
     </a>
   </li>
 
@@ -545,6 +599,21 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -553,9 +622,28 @@
                   <a href="https://github.com/investorid/documentation/edit/master/docs/developers/sdks/identity-sdk/identity-sdk.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Home</h1>
-                
-                
+                <h1 id="the-identity-sdk">The Identity SDK</h1>
+<p>This package facilitates the interaction with Identities stored in the BlockChain.</p>
+<h1 id="forewords">Forewords</h1>
+<blockquote>
+<p>It is recommended you read the <a href="../../../../identities/introduction/">Identities</a> section before continuing further.</p>
+</blockquote>
+<p>The JS Identity SDK targets server-side environments with a NodeJS Runtime.
+It is intended to work in-browser with web3 provider as well, but it was not built yet.</p>
+<p>It is intended to support any identity compliant with the <a href="https://github.com/ethereum/eips/issues/734">ERC734</a> and <a href="https://github.com/ethereum/EIPs/issues/735">ERC735</a> standards (which are still in draft state). It will work especially well with the <a href="https://github.com/TokenySolutions/T-REX">contract implementations of the T-REX standard</a>.</p>
+<h1 id="functionality">Functionality</h1>
+<ul>
+<li>Deploy identities</li>
+<li>List keys on an Identity.</li>
+<li>Manage keys on an Identity (if allowed).</li>
+<li>List Claims on an Identity.</li>
+<li>Manage Claims on an Identity (if allowed).</li>
+<li>Issue claims for an Identity (if allowed).</li>
+<li>Verify a claim (check validity).</li>
+<li>Fetch claim data using their URI.</li>
+<li>Request access to claim private data using their URI.</li>
+<li>Use access grants to access private data of claims.</li>
+</ul>
                 
                   
                 

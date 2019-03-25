@@ -13,7 +13,7 @@
         <meta name="description" content="Official documentation for the InvestorID solution, an Identity ecosystem for digital assets holders to create blockchain identities to access and trade compliant digital assets.">
       
       
-        <link rel="canonical" href="https://investorid.org/developers/sdks/identity-sdk/get-started/">
+        <link rel="canonical" href="https://investorid.org/developers/sdks/identity-sdk/examples/">
       
       
         <meta name="author" content="InvestorID Organization">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Get Started - InvestorID Documentation</title>
+        <title>Examples - InvestorID Documentation</title>
       
     
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#get-started" tabindex="1" class="md-skip">
+      <a href="#some-example-of-usage" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -137,7 +137,7 @@
               InvestorID Documentation
             </span>
             <span class="md-header-nav__topic">
-              Get Started
+              Examples
             </span>
           
         </div>
@@ -476,63 +476,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Get Started
-      </label>
-    
-    <a href="./" title="Get Started" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../get-started/" title="Get Started" class="md-nav__link">
       Get Started
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#load-an-identity" title="Load an Identity" class="md-nav__link">
-    Load an Identity
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-sdk-methods-to-retrieve-data" title="Use SDK methods to retrieve data" class="md-nav__link">
-    Use SDK methods to retrieve data
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -576,11 +524,70 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../examples/" title="Examples" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Examples
+      </label>
+    
+    <a href="./" title="Examples" class="md-nav__link md-nav__link--active">
       Examples
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#execute-direct-contract-calls" title="Execute direct contract calls" class="md-nav__link">
+    Execute direct contract calls
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-keys-of-an-identity" title="Get keys of an Identity" class="md-nav__link">
+    Get keys of an Identity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy-an-identity" title="Deploy an identity" class="md-nav__link">
+    Deploy an identity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-details-of-a-claim-with-an-claim-issuer" title="Get details of a claim with an Claim Issuer" class="md-nav__link">
+    Get details of a claim with an Claim Issuer
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -656,22 +663,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation" title="Installation" class="md-nav__link">
-    Installation
+  <a href="#execute-direct-contract-calls" title="Execute direct contract calls" class="md-nav__link">
+    Execute direct contract calls
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#load-an-identity" title="Load an Identity" class="md-nav__link">
-    Load an Identity
+  <a href="#get-keys-of-an-identity" title="Get keys of an Identity" class="md-nav__link">
+    Get keys of an Identity
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#use-sdk-methods-to-retrieve-data" title="Use SDK methods to retrieve data" class="md-nav__link">
-    Use SDK methods to retrieve data
+  <a href="#deploy-an-identity" title="Deploy an identity" class="md-nav__link">
+    Deploy an identity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-details-of-a-claim-with-an-claim-issuer" title="Get details of a claim with an Claim Issuer" class="md-nav__link">
+    Get details of a claim with an Claim Issuer
   </a>
   
 </li>
@@ -692,35 +706,95 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/investorid/documentation/edit/master/docs/developers/sdks/identity-sdk/get-started.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/investorid/documentation/edit/master/docs/developers/sdks/identity-sdk/examples.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="get-started">Get Started</h1>
-<h2 id="installation">Installation</h2>
-<p>Install with <code>npm install @investorid/identity-sdk</code></p>
-<p>Then require with:
+                <h1 id="some-example-of-usage">Some example of usage</h1>
+<h2 id="execute-direct-contract-calls">Execute direct contract calls</h2>
+<p>You can also call function from the smart contract using the <code>Identity.instance</code> property.</p>
 <div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">IdentitySDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@investorid/identity-sdk&#39;</span><span class="p">);</span>
-</pre></div></p>
-<h2 id="load-an-identity">Load an Identity</h2>
-<p>The unique identifier of an Identity is its address.
-To load its data from the BlockChain, you need to instantiate a connection with a BlockChain provider.
-In this documentation, the test network <code>ropsten</code> will be used. Replace by <code>homestead</code> to target main network (see the <a href="../blockchain-providers/">BlockChain Providers</a> for more information on different type of network).</p>
-<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">ethers</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ethers&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">Ethers</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ethers&#39;</span><span class="p">);</span>
 
-<span class="kr">const</span> <span class="nx">provider</span> <span class="o">=</span> <span class="nx">ethers</span><span class="p">.</span><span class="nx">getDefaultProvider</span><span class="p">(</span><span class="s1">&#39;ropsten&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">provider</span> <span class="o">=</span> <span class="nx">Ethers</span><span class="p">.</span><span class="nx">getDefaultProvider</span><span class="p">(</span><span class="s1">&#39;ropsten&#39;</span><span class="p">);</span>
 
-<span class="c1">// instantiate an Identity from its address on a specific network.</span>
 <span class="kr">const</span> <span class="nx">identity</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">Identity</span><span class="p">(</span><span class="s1">&#39;0xadD92F8Ef0729E969c5a98Ea5740c9b644B362e3&#39;</span><span class="p">,</span> <span class="nx">provider</span><span class="p">);</span>
-</pre></div>
 
-<h2 id="use-sdk-methods-to-retrieve-data">Use SDK methods to retrieve data</h2>
-<p>Once the identity is loaded from an address, you can call the methods from the Identity object.
-Here is a basic one that retrieves all claims of an identity by type.</p>
-<div class="highlight"><pre><span></span><span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">claims</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">identity</span><span class="p">.</span><span class="nx">getClaimsByType</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">claims</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">identity</span><span class="p">.</span><span class="nx">instance</span><span class="p">.</span><span class="nx">getClaimIdsByType</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
 
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">claims</span><span class="p">);</span>
-  <span class="c1">// Will return the parsed claims of the identity.</span>
+  <span class="c1">// Will return the unparsed response from the blockchain.</span>
+<span class="p">});</span>
+</pre></div>
+
+<p>All functions from the <a href="https://github.com/ethereum/eips/issues/734">ERC734</a> and <a href="https://github.com/ethereum/EIPs/issues/735">ERC735</a> standards will be callable, as well as all custom functions implemented in the <a href="https://github.com/TokenySolutions/T-REX">T-REX standard</a>.</p>
+<h2 id="get-keys-of-an-identity">Get keys of an Identity</h2>
+<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">IdentitySDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nakasar/identity-sdk&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">Ethers</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ethers&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">provider</span> <span class="o">=</span> <span class="nx">Ethers</span><span class="p">.</span><span class="nx">getDefaultProvider</span><span class="p">(</span><span class="s1">&#39;ropsten&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">identity</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">Identity</span><span class="p">(</span><span class="s1">&#39;0xadD92F8Ef0729E969c5a98Ea5740c9b644B362e3&#39;</span><span class="p">,</span> <span class="nx">provider</span><span class="p">);</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">identity</span><span class="p">.</span><span class="nx">getKeysByPurpose</span><span class="p">(</span><span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">enums</span><span class="p">.</span><span class="nx">KeyPurpose</span><span class="p">.</span><span class="nx">CLAIM</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">keys</span><span class="p">);</span>
+
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">await</span> <span class="nx">identity</span><span class="p">.</span><span class="nx">getKeyPurpose</span><span class="p">(</span><span class="nx">keys</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">key</span><span class="p">));</span>
+<span class="p">})();</span>
+</pre></div>
+
+<h2 id="deploy-an-identity">Deploy an identity</h2>
+<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">IdentitySDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nakasar/identity-sdk&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">Ethers</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ethers&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">provider</span> <span class="o">=</span> <span class="nx">Ethers</span><span class="p">.</span><span class="nx">getDefaultProvider</span><span class="p">(</span><span class="s1">&#39;ropsten&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">PRIVATE_KEY</span> <span class="o">=</span> <span class="s1">&#39;tokeny_private_key&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">wallet</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Ethers</span><span class="p">.</span><span class="nx">Wallet</span><span class="p">(</span><span class="nx">PRIVATE_KEY</span><span class="p">,</span> <span class="nx">provider</span><span class="p">);</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// Deploy a new Identity, will await transaction confirmation.</span>
+  <span class="kr">const</span> <span class="nx">identity</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">Identity</span><span class="p">.</span><span class="nx">deployNew</span><span class="p">(</span><span class="nx">wallet</span><span class="p">);</span>
+<span class="p">})();</span>
+</pre></div>
+
+<h2 id="get-details-of-a-claim-with-an-claim-issuer">Get details of a claim with an Claim Issuer</h2>
+<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">IdentitySDK</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@nakasar/identity-sdk&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">Ethers</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;ethers&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">provider</span> <span class="o">=</span> <span class="nx">Ethers</span><span class="p">.</span><span class="nx">getDefaultProvider</span><span class="p">(</span><span class="s1">&#39;ropsten&#39;</span><span class="p">);</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">config</span><span class="p">({</span> <span class="nx">allowUnsecuredProviders</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+
+    <span class="kr">const</span> <span class="nx">identity</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">Identity</span><span class="p">(</span><span class="s1">&#39;0xadD92F8Ef0729E969c5a98Ea5740c9b644B362e3&#39;</span><span class="p">,</span> <span class="nx">provider</span><span class="p">);</span>
+
+    <span class="kr">const</span> <span class="nx">claims</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">identity</span><span class="p">.</span><span class="nx">getClaimsByType</span><span class="p">(</span><span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">enums</span><span class="p">.</span><span class="nx">ClaimType</span><span class="p">.</span><span class="nx">KYC</span><span class="p">);</span>
+
+    <span class="kr">const</span> <span class="nx">claim</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">Claim</span><span class="p">(</span><span class="nx">claims</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+    <span class="nx">await</span> <span class="nx">claim</span><span class="p">.</span><span class="nx">populate</span><span class="p">();</span> <span class="c1">// Will fetch public data of the claim from the claim URI.</span>
+
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">claim</span><span class="p">);</span>
+
+    <span class="cm">/*</span>
+<span class="cm">    Claim {</span>
+<span class="cm">      data: &#39;0x65773261724950755a302f626e5a744e327961676676376139462f6a3672744a4e3761666a52414c6871493d&#39;,</span>
+<span class="cm">      id: &#39;0x3c6532cc1f4d1a44de8f58d4bde617bef8e744168bf92d783a0e1b66e7c6a44a&#39;,</span>
+<span class="cm">      issuer: &#39;0x8c78fF753c63ea0e8CA1FcA9997A132bC3e6a8F1&#39;,</span>
+<span class="cm">      scheme: 1,</span>
+<span class="cm">      type: 1,</span>
+<span class="cm">      uri: &#39;http://localhost:8080/claims/b701e350-2a08-11e9-ac7e-517ddf10b60e&#39;,</span>
+<span class="cm">      issuanceDate: 2019-02-06T12:14:12.996Z,</span>
+<span class="cm">      emissionDate: 2019-02-06T12:15:02.039Z,</span>
+<span class="cm">      status: &#39;PENDING&#39;,</span>
+<span class="cm">      publicData: { result: &#39;clear&#39; } }</span>
+<span class="cm">     */</span>
 <span class="p">})();</span>
 </pre></div>
                 
@@ -743,7 +817,7 @@ Here is a basic one that retrieves all claims of an identity by type.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../identity-sdk/" title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../signer-module/" title="Signing Challenges" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -752,19 +826,19 @@ Here is a basic one that retrieves all claims of an identity by type.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Signing Challenges
               </span>
             </div>
           </a>
         
         
-          <a href="../configuration/" title="Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../../../license/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Configuration
+                License
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

@@ -13,7 +13,7 @@
         <meta name="description" content="Official documentation for the InvestorID solution, an Identity ecosystem for digital assets holders to create blockchain identities to access and trade compliant digital assets.">
       
       
-        <link rel="canonical" href="https://investorid.org/">
+        <link rel="canonical" href="https://investorid.org/developers/sdks/identity-sdk/signer-module/">
       
       
         <meta name="author" content="InvestorID Organization">
@@ -37,18 +37,18 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="images/InvestorID_icon.png">
+      <link rel="shortcut icon" href="../../../../images/InvestorID_icon.png">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
     
     
       
-        <title>InvestorID Documentation</title>
+        <title>Signing Challenges - InvestorID Documentation</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="assets/stylesheets/application-palette.224b79ff.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -57,7 +57,7 @@
       
     
     
-      <script src="assets/javascripts/modernizr.01ccdecf.js"></script>
+      <script src="../../../../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
@@ -66,10 +66,10 @@
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/material-icons.css">
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
     
@@ -112,7 +112,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#home" tabindex="1" class="md-skip">
+      <a href="#signermodule" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -137,7 +137,7 @@
               InvestorID Documentation
             </span>
             <span class="md-header-nav__topic">
-              Home
+              Signing Challenges
             </span>
           
         </div>
@@ -245,20 +245,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
       Home
     </a>
-    
   </li>
 
     
@@ -268,7 +259,7 @@
 
 
   <li class="md-nav__item">
-    <a href="introduction/" title="Introduction" class="md-nav__link">
+    <a href="../../../../introduction/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -299,7 +290,7 @@
 
 
   <li class="md-nav__item">
-    <a href="blockchain/core-concepts/" title="Main concepts" class="md-nav__link">
+    <a href="../../../../blockchain/core-concepts/" title="Main concepts" class="md-nav__link">
       Main concepts
     </a>
   </li>
@@ -335,7 +326,7 @@
 
 
   <li class="md-nav__item">
-    <a href="identities/introduction/" title="What is an Identity" class="md-nav__link">
+    <a href="../../../../identities/introduction/" title="What is an Identity" class="md-nav__link">
       What is an Identity
     </a>
   </li>
@@ -347,7 +338,7 @@
 
 
   <li class="md-nav__item">
-    <a href="identities/information/" title="Basic Information" class="md-nav__link">
+    <a href="../../../../identities/information/" title="Basic Information" class="md-nav__link">
       Basic Information
     </a>
   </li>
@@ -359,7 +350,7 @@
 
 
   <li class="md-nav__item">
-    <a href="identities/claims/" title="Claims" class="md-nav__link">
+    <a href="../../../../identities/claims/" title="Claims" class="md-nav__link">
       Claims
     </a>
   </li>
@@ -371,7 +362,7 @@
 
 
   <li class="md-nav__item">
-    <a href="identities/connect-with-identity/" title="Connect with your Identity" class="md-nav__link">
+    <a href="../../../../identities/connect-with-identity/" title="Connect with your Identity" class="md-nav__link">
       Connect with your Identity
     </a>
   </li>
@@ -383,7 +374,7 @@
 
 
   <li class="md-nav__item">
-    <a href="identities/grants/" title="Controlling your data" class="md-nav__link">
+    <a href="../../../../identities/grants/" title="Controlling your data" class="md-nav__link">
       Controlling your data
     </a>
   </li>
@@ -398,10 +389,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Developers
@@ -419,7 +412,7 @@
 
 
   <li class="md-nav__item">
-    <a href="developers/developers/" title="Developers HomePage" class="md-nav__link">
+    <a href="../../../developers/" title="Developers HomePage" class="md-nav__link">
       Developers HomePage
     </a>
   </li>
@@ -429,10 +422,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2" type="checkbox" id="nav-5-2" checked>
     
     <label class="md-nav__link" for="nav-5-2">
       SDKs
@@ -448,10 +443,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2-1" type="checkbox" id="nav-5-2-1">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-2-1" type="checkbox" id="nav-5-2-1" checked>
     
     <label class="md-nav__link" for="nav-5-2-1">
       The Identity SDK
@@ -469,7 +466,7 @@
 
 
   <li class="md-nav__item">
-    <a href="developers/sdks/identity-sdk/identity-sdk/" title="Home" class="md-nav__link">
+    <a href="../identity-sdk/" title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -481,7 +478,7 @@
 
 
   <li class="md-nav__item">
-    <a href="developers/sdks/identity-sdk/get-started/" title="Get Started" class="md-nav__link">
+    <a href="../get-started/" title="Get Started" class="md-nav__link">
       Get Started
     </a>
   </li>
@@ -493,7 +490,7 @@
 
 
   <li class="md-nav__item">
-    <a href="developers/sdks/identity-sdk/configuration/" title="Configuration" class="md-nav__link">
+    <a href="../configuration/" title="Configuration" class="md-nav__link">
       Configuration
     </a>
   </li>
@@ -505,7 +502,7 @@
 
 
   <li class="md-nav__item">
-    <a href="developers/sdks/identity-sdk/blockchain-providers/" title="BlockChain Providers" class="md-nav__link">
+    <a href="../blockchain-providers/" title="BlockChain Providers" class="md-nav__link">
       BlockChain Providers
     </a>
   </li>
@@ -515,11 +512,45 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="developers/sdks/identity-sdk/signer-module/" title="Signing Challenges" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Signing Challenges
+      </label>
+    
+    <a href="./" title="Signing Challenges" class="md-nav__link md-nav__link--active">
       Signing Challenges
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signermodule" title="SignerModule" class="md-nav__link">
+    SignerModule
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -529,7 +560,7 @@
 
 
   <li class="md-nav__item">
-    <a href="developers/sdks/identity-sdk/examples/" title="Examples" class="md-nav__link">
+    <a href="../examples/" title="Examples" class="md-nav__link">
       Examples
     </a>
   </li>
@@ -575,7 +606,7 @@
 
 
   <li class="md-nav__item">
-    <a href="license/" title="License" class="md-nav__link">
+    <a href="../../../../license/" title="License" class="md-nav__link">
       License
     </a>
   </li>
@@ -600,8 +631,22 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#signermodule" title="SignerModule" class="md-nav__link">
+    SignerModule
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -613,18 +658,36 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/investorid/documentation/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/investorid/documentation/edit/master/docs/developers/sdks/identity-sdk/signer-module.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="home">Home</h1>
-<p>Welcome to the official documentation for the <a href="http://investorid.org">InvestorID organization</a>.</p>
-<p align="center">
-  <a href="http://investorid.org" target="_blank">
-  <img src="./images/InvestorID_logo.png" width="200" title="t-rex">
-  </a>
-</p>
+                  <h1>Signing Challenges</h1>
+                
+                <h3 id="signermodule">SignerModule</h3>
+<p>Many interaction with identities, and especially accessing claims, require to sign a challenge message.
+Functions requiring these signatures expect a SignerModule as argument.</p>
+<p>A SignerModule must expose a <code>.getPublicKey()</code> and a <code>.signMessage(message: string)</code> functions.</p>
+<p>This, for instance, id a valid simple SignerModule:</p>
+<div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">jsrasign</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;jsrasign&#39;</span><span class="p">);</span>
 
-<p>Learn more about InvestorID on the <a href="http://investorid.org">official website</a>.</p>
+<span class="kr">const</span> <span class="nx">signer</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">getPublicKey</span><span class="o">:</span> <span class="nx">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span>
+        <span class="nx">key</span><span class="o">:</span> <span class="s2">&quot;-----BEGIN CERTIFICATE----- my_super_public_key -----END CERTIFICATE-----&quot;</span><span class="p">,</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;X.509&quot;</span><span class="p">,</span>
+        <span class="nx">signingMethod</span><span class="o">:</span> <span class="s2">&quot;SHA-256&quot;</span><span class="p">,</span>
+    <span class="p">}),</span>
+    <span class="nx">signMessage</span><span class="o">:</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">signer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">jsrsasign</span><span class="p">.</span><span class="nx">Signature</span><span class="p">({</span> <span class="nx">alg</span><span class="o">:</span> <span class="s1">&#39;SHA256withRSA&#39;</span> <span class="p">});</span>
+        <span class="nx">signer</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="s2">&quot;-----BEGIN CERTIFICATE----- my_super_PRIVATE_no_really_super_secret_PRIVATE_key -----END CERTIFICATE-----&quot;</span><span class="p">);</span>
+        <span class="nx">signer</span><span class="p">.</span><span class="nx">updateString</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">signer</span><span class="p">.</span><span class="nx">sign</span><span class="p">();</span>
+    <span class="p">},</span>
+<span class="p">};</span>
+</pre></div>
+
+<p>It can be used in functions such as Claim.requestAccess():</p>
+<div class="highlight"><pre><span></span><span class="nx">claim</span><span class="p">.</span><span class="nx">requestAccess</span><span class="p">(</span><span class="nx">IdentitySDK</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">enums</span><span class="p">.</span><span class="nx">AccessGrantType</span><span class="p">.</span><span class="nx">PERSISTENT</span><span class="p">,</span> <span class="nx">signer</span><span class="p">);</span>
+</pre></div>
                 
                   
                 
@@ -645,14 +708,28 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
+          <a href="../blockchain-providers/" title="BlockChain Providers" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                BlockChain Providers
+              </span>
+            </div>
+          </a>
         
-          <a href="introduction/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="../examples/" title="Examples" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Introduction
+                Examples
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -679,7 +756,7 @@
       </div>
       
   <div class="md-footer-social">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.css">
+    <link rel="stylesheet" href="../../../../assets/fonts/font-awesome.css">
     
       <a href="https://github.com/InvestorID" class="md-footer-social__link fa fa-github"></a>
     
@@ -691,9 +768,9 @@
       
     </div>
     
-      <script src="assets/javascripts/application.2ba8dec4.js"></script>
+      <script src="../../../../assets/javascripts/application.2ba8dec4.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       
         <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
       
