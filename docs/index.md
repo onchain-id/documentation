@@ -4,7 +4,7 @@ Welcome to the official documentation for the [InvestorID organization]({{ links
 
 <p align="center">
   <a href="{{ links.investorid }}" target="_blank">
-  <img src="/images/InvestorID_logo.png" width="200" title="t-rex">
+  <img src="./images/InvestorID_logo.png" width="200" title="t-rex">
   </a>
 </p>
 

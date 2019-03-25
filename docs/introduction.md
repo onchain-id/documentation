@@ -14,7 +14,7 @@ They are fully compatible with every security token based on the [T-REX standard
 
 <p align="center">
   <a href="https://tokeny.com/t-rex-whitepaper/">
-  <img src="/images/T-REX.png" width="150" title="t-rex">
+  <img src="../images/T-REX.png" width="150" title="t-rex">
   </a>
 </p>
 
