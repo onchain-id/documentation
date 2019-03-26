@@ -2,7 +2,7 @@
 
 These are the list of claim schemes that are standard for InvestorID Identities and some other standards like T-REX.
 
-A JSON description of these schemes can be downloaded from the [Github repository]().
+A JSON description of these schemes can be downloaded from the [Github repository](https://github.com/investorid/documentation/blob/master/docs/developers/constants/claim_schemes.json).
 
 | Claim Scheme   | Name            | Description                | Example                        |
 | :------------- | :-------------- | -------------------------: | -----------------------------: |
