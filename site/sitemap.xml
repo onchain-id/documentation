@@ -2,82 +2,92 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://investorid.org/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/introduction/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/blockchain/core-concepts/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/identities/introduction/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/identities/information/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/identities/claims/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/identities/connect-with-identity/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/identities/grants/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/developers/developers/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/developers/sdks/identity-sdk/identity-sdk/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/developers/sdks/identity-sdk/get-started/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/developers/sdks/identity-sdk/configuration/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/developers/sdks/identity-sdk/blockchain-providers/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/developers/sdks/identity-sdk/signer-module/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/developers/sdks/identity-sdk/examples/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://investorid.org/developers/constants/claim-types/</loc>
+     <lastmod>2019-03-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://investorid.org/developers/constants/claim-schemes/</loc>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://investorid.org/license/</loc>
-     <lastmod>2019-03-25</lastmod>
+     <lastmod>2019-03-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

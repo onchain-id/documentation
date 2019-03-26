@@ -58,5 +58,8 @@ nav:
         - BlockChain Providers: developers/sdks/identity-sdk/blockchain-providers.md
         - Signing Challenges: developers/sdks/identity-sdk/signer-module.md
         - Examples: developers/sdks/identity-sdk/examples.md
+    - Constants:
+      - Claim Types: developers/constants/claim-types.md
+      - Claim Schemes: developers/constants/claim-schemes.md
   - About:
     - License: license.md
