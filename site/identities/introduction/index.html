@@ -112,6 +112,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#investorid-identities" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -329,10 +333,41 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        What is an Identity
+      </label>
     
     <a href="./" title="What is an Identity" class="md-nav__link md-nav__link--active">
       What is an Identity
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-i-do-with-an-investorid" title="What can I do with an InvestorID?" class="md-nav__link">
+    What can I do with an InvestorID?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -367,8 +402,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../connect-with-identity/" title="Connect with your Identity" class="md-nav__link">
-      Connect with your Identity
+    <a href="../connect-with-identity/" title="Connect with Identity" class="md-nav__link">
+      Connect with Identity
     </a>
   </li>
 
@@ -379,8 +414,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../grants/" title="Controlling your data" class="md-nav__link">
-      Controlling your data
+    <a href="../grants/" title="Sharing data" class="md-nav__link">
+      Sharing data
     </a>
   </li>
 
@@ -584,6 +619,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../developers/constants/information-types/" title="Information Types" class="md-nav__link">
+      Information Types
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -637,6 +684,37 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-can-i-do-with-an-investorid" title="What can I do with an InvestorID?" class="md-nav__link">
+    What can I do with an InvestorID?
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -645,9 +723,29 @@
                   <a href="https://github.com/investorid/documentation/edit/master/docs/identities/introduction.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>What is an Identity</h1>
-                
-                
+                <h1 id="investorid-identities">InvestorID Identities</h1>
+<p>InvestorID Identities are stored on the BlockChain, in a decentralized way.
+They can't be hidden nor deleted.
+No service or organization can remove your access rights to it, and it spans a lifetime.</p>
+<p>Anyone can issue its own Identity, it only takes a bit of knowledge, time, and less than a few cents.</p>
+<p>Identities are Smart Contract, deployed on the Ethereum Main Network.
+Any implementation standard to the ERC734 and ERC725 proposals are supported by the InvestorID standard, and thus with
+any service that supports the InvestorID standard.</p>
+<p>Yet, an Identity has no value itself. This is the information attached to it that makes an Identity what it is: an Identity.</p>
+<p>These information can be self-attested, and many website will only use self-attested information such as an username.</p>
+<p>Regulated exchanges, however, requires an Identity to be "real" one, linked to an existing person or organization.
+Proof of these information are called <strong>Claims</strong>.
+They are issued by any <strong>Claim Issuer</strong> that is allowed by the <em>Identity Owner</em> to publish claims about the Identity.
+For example, a Claim Issuer could emit a claim saying that a given Identity has passed an Identity Check with an ID card and a selfie.</p>
+<p>Of course, sensitive information such as the ID card number or the picture itself are not stored on the blockchain publicly.
+The Claim Issuer will store the claim <strong>Private Data</strong> on its <em>off-chain</em> servers, and will publish publicly <em>on-chain</em> a signature.
+Therefore, anyone know that the identity has passed an Identity Check.
+But to access the data, one would need the explicit consent of the <em>Identity Owner</em> allowing the consultation of the private data.</p>
+<h2 id="what-can-i-do-with-an-investorid">What can I do with an InvestorID?</h2>
+<ul>
+<li>Log in to compatible websites without any password, using an hardware security key.</li>
+<li>Participate in regulated tokenized assets offerings, and exchange tokens in a decentralized way.</li>
+</ul>
                 
                   
                 
