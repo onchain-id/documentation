@@ -46,8 +46,8 @@ nav:
     - What is an Identity: identities/introduction.md
     - Basic Information: identities/information.md
     - Claims: identities/claims.md
-    - Connect with your Identity: identities/connect-with-identity.md
-    - Controlling your data: identities/grants.md
+    - Connect with Identity: identities/connect-with-identity.md
+    - Sharing data: identities/grants.md
   - Developers:
     - Developers HomePage: developers/developers.md
     - SDKs:
@@ -61,5 +61,6 @@ nav:
     - Constants:
       - Claim Types: developers/constants/claim-types.md
       - Claim Schemes: developers/constants/claim-schemes.md
+      - Information Types: developers/constants/information-types.md
   - About:
     - License: license.md
