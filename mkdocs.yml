@@ -58,6 +58,15 @@ nav:
         - BlockChain Providers: developers/sdks/identity-sdk/blockchain-providers.md
         - Signing Challenges: developers/sdks/identity-sdk/signer-module.md
         - Examples: developers/sdks/identity-sdk/examples.md
+    - Providers:
+      - Information Providers:
+        - What are they?: developers/providers/Information Providers/information-providers.md
+        - Get starded: developers/providers/Information Providers/get-starded.md
+        - Specification: developers/providers/Information Providers/specification.md
+      - Claim Issuers:
+        - What are they?: developers/providers/Claim Issuers/claim-issuers.md
+        - Get starded: developers/providers/Claim Issuers/get-starded.md
+        - Specification: developers/providers/Claim Issuers/specification.md
     - Constants:
       - Claim Types: developers/constants/claim-types.md
       - Claim Schemes: developers/constants/claim-schemes.md
