@@ -7,6 +7,7 @@ repo_name: 'investorid/documentation'
 repo_url: 'https://github.com/investorid/documentation'
 theme:
   name: 'material'
+  custom_dir: 'theme/'
   palette:
     primary: 'Blue Grey'
     accent: 'Indigo'
@@ -60,11 +61,11 @@ nav:
         - Examples: developers/sdks/identity-sdk/examples.md
     - Providers:
       - Information Providers:
-        - What are they?: developers/providers/Information Providers/information-providers.md
+        - What are they?: developers/providers/Information Providers/presentation.md
         - Get starded: developers/providers/Information Providers/get-starded.md
         - Specification: developers/providers/Information Providers/specification.md
       - Claim Issuers:
-        - What are they?: developers/providers/Claim Issuers/claim-issuers.md
+        - What are they?: developers/providers/Claim Issuers/presentation.md
         - Get starded: developers/providers/Claim Issuers/get-starded.md
         - Specification: developers/providers/Claim Issuers/specification.md
     - Constants:
