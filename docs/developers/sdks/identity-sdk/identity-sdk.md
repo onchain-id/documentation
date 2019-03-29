@@ -7,7 +7,7 @@ This package facilitates the interaction with Identities stored in the BlockChai
 > It is recommended you read the [Identities](../../../identities/introduction.md) section before continuing further.
 
 The JS Identity SDK targets server-side environments with a NodeJS Runtime.
-It is intended to work in-browser with web3 provider as well, but it was not built yet.
+It is intended to work in-browser with web3 provider as well, but it was not built for browsers yet.
 
 It is intended to support any identity compliant with the [ERC734](https://github.com/ethereum/eips/issues/734) and [ERC735](https://github.com/ethereum/EIPs/issues/735) standards (which are still in draft state). It will work especially well with the [contract implementations of the T-REX standard](https://github.com/TokenySolutions/T-REX).
 
