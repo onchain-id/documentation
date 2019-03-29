@@ -852,6 +852,104 @@
 <td align="right"><a href="../claim-schemes/">URL_ENCODED</a></td>
 <td align="right"><code>lastName=VALUE</code></td>
 </tr>
+<tr>
+<td align="left">10101000100000</td>
+<td align="left"><strong>INDIVIDUAL_INVESTOR</strong></td>
+<td align="right"><em>Investor is an individual.</em></td>
+<td align="right"><a href="../claim-schemes/">EMPTY</a></td>
+<td align="right"><code>true</code></td>
+</tr>
+<tr>
+<td align="left">10101000100001</td>
+<td align="left"><strong>BASIC_IDENTITY</strong></td>
+<td align="right"><em>Combination of name, gender and birth date, <strong>hashed</strong>.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>0x0999ddefa34bc...</code></td>
+</tr>
+<tr>
+<td align="left">10101000100002</td>
+<td align="left"><strong>CONTACT_ADDRESS</strong></td>
+<td align="right"><em>Combination of residence, email, phone, <strong>hashed</strong>.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>0x0999ddefa34bc...</code></td>
+</tr>
+<tr>
+<td align="left">10101000100003</td>
+<td align="left"><strong>SOVEREIGN_IDENTITY</strong></td>
+<td align="right"><em>Combination of ID number, TIN, <strong>hashed</strong>.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>0x0999ddefa34bc...</code></td>
+</tr>
+<tr>
+<td align="left">10101000100004</td>
+<td align="left"><strong>POLITICALLY_EXPOSED</strong></td>
+<td align="right"><em>Investor is politically exposed, data is PEP type.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>elected</code></td>
+</tr>
+<tr>
+<td align="left">10101000200005</td>
+<td align="left"><strong>INSTITUTIONAL_INVESTOR</strong></td>
+<td align="right"><em>Investor is an institution.</em></td>
+<td align="right"><a href="../claim-schemes/">EMPTY</a></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">10101000200006</td>
+<td align="left"><strong>INSTITUTION_INFORMATION</strong></td>
+<td align="right"><em>Concatenation of company name and type, <strong>hashed</strong>.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>0x0999ddefa34bc...</code></td>
+</tr>
+<tr>
+<td align="left">10101000200007</td>
+<td align="left"><strong>INSTITUTION_DETAILS</strong></td>
+<td align="right"><em>Concatenation of incorporation date, sector and form, <strong>hashed</strong>.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>0x0999ddefa34bc...</code></td>
+</tr>
+<tr>
+<td align="left">10101000200008</td>
+<td align="left"><strong>LEGAL_IDENTIFICATION</strong></td>
+<td align="right"><em>Concatenation of registration number, VAT, LEI, <strong>hashed</strong>.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>0x0999ddefa34bc...</code></td>
+</tr>
+<tr>
+<td align="left">10101000200005</td>
+<td align="left"><strong>INSTITUTIONAL_INVESTOR</strong></td>
+<td align="right"><em>Investor is an institution.</em></td>
+<td align="right"><a href="../claim-schemes/">EMPTY</a></td>
+<td align="right"></td>
+</tr>
+<tr>
+<td align="left">10101000300002</td>
+<td align="left"><strong>COUNTRY</strong></td>
+<td align="right"><em>Country ISO-3 in clear.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>FRA</code></td>
+</tr>
+<tr>
+<td align="left">10101000300001</td>
+<td align="left"><strong>AML_STATUS</strong></td>
+<td align="right"><em>AML status first, then reason in clear, and details hashed.</em></td>
+<td align="right"><a href="../claim-schemes/">URL_ENCODED</a></td>
+<td align="right"><code>status=0&amp;reason=Description&amp;hash=0x0999ddefa...34bc</code></td>
+</tr>
+<tr>
+<td align="left">1010101xxxxxxx</td>
+<td align="left"><strong>SPECIFIC_KYC_STATUS</strong></td>
+<td align="right"><em>Details required by offering for the KYC status, <strong>hashed</strong>.</em></td>
+<td align="right"><a href="../claim-schemes/">STRING</a></td>
+<td align="right"><code>0x0999ddefa34bc...</code></td>
+</tr>
+<tr>
+<td align="left">1010102xxxxxxx</td>
+<td align="left"><strong>SPECIFIC_ACCREDITATION</strong></td>
+<td align="right"><em>Investor is accredited by issuer, or status is irrelevant.</em></td>
+<td align="right"><a href="../claim-schemes/">INTEGER</a></td>
+<td align="right"><code>1</code> for accredited, <code>2</code> for irrelevant.</td>
+</tr>
 </tbody>
 </table>
                 
