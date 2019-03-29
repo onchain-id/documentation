@@ -436,6 +436,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#revoking-and-monitoring-access-grants" title="Revoking and monitoring Access Grants" class="md-nav__link">
+    Revoking and monitoring Access Grants
+  </a>
+  
+</li>
+      
       
       
       
@@ -659,8 +666,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developers/providers/Information Providers/get-starded.md" title="Get starded" class="md-nav__link">
-      Get starded
+    <a href="../../developers/providers/Information Providers/get-started/" title="Get started" class="md-nav__link">
+      Get started
     </a>
   </li>
 
@@ -719,8 +726,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../developers/providers/Claim Issuers/get-starded.md" title="Get starded" class="md-nav__link">
-      Get starded
+    <a href="../../developers/providers/Claim Issuers/get-started/" title="Get started" class="md-nav__link">
+      Get started
     </a>
   </li>
 
@@ -902,6 +909,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#revoking-and-monitoring-access-grants" title="Revoking and monitoring Access Grants" class="md-nav__link">
+    Revoking and monitoring Access Grants
+  </a>
+  
+</li>
+      
       
       
       
@@ -990,6 +1004,11 @@ to the data that can be updated.</em></p>
 <p><em>For instance, if a claim has to be shared, and its URI is <code>GET http://api.identity-service.example.com/claims/09724-IiuD73-989bjD8</code>, the access grant request url will be <code>POST http://api.identity-service.example.com/claims/09724-IiuD73-989bjD8/access-requests</code>.</em></p>
 <p>The response Location will point toward the URI of the Access Grant request, that can be itself validated by appending <code>POST</code> <code>/validations</code>.</p>
 <p><em>In the above example, to validate the access grant request, call <code>POST http://api.identity-service.example.com/access-grants/8hy67-hu79k-gf76hk/validations</code>.</em></p>
+<p>Information Providers should support at least one of the following authentication methods for Service Providers:</p>
+<ul>
+<li>API Keys.</li>
+<li>Challenge Signature flow.</li>
+</ul>
 <h3 id="synchronous-immediate-grant">Synchronous Immediate grant</h3>
 <div class="mermaid">sequenceDiagram
     participant I as Identity Owner
@@ -1037,12 +1056,16 @@ to the data that can be updated.</em></p>
     IP--&gt;&gt;I: confirmation
     IP-&gt;&gt;-S: grant notification
 
-    S-&gt;&gt;+IP: Request claim data (with API KEY)
-    IP-&gt;&gt;IP: Check API KEY access rights
+    S-&gt;&gt;+IP: Request claim data (with API KEY or challenge signature)
+    IP-&gt;&gt;IP: Check API KEY/challenge access rights
     IP--&gt;&gt;-S: Claim private data</div>
 
 <p>The <em>confirmation</em> response from the Identity Service returns to the requester service the challenge to be signed.
 This means that the service can request the Identity Owner signature without having to wait for the notification to be sent to the user.</p>
+<h2 id="revoking-and-monitoring-access-grants">Revoking and monitoring Access Grants</h2>
+<p>Each <strong>Information Provider</strong> offers different level of access grants control. Some might accept only immediate grants.</p>
+<p>Some will allow Identity Owners to see which access grants they emitted, both immediate and persistent, and how they are currently used.</p>
+<p>When an Identity Owner revokes an Access Grants, the related service should no longer be able to access the data.</p>
                 
                   
                 

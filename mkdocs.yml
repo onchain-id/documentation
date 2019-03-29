@@ -62,11 +62,11 @@ nav:
     - Providers:
       - Information Providers:
         - What are they?: developers/providers/Information Providers/presentation.md
-        - Get starded: developers/providers/Information Providers/get-starded.md
+        - Get started: developers/providers/Information Providers/get-started.md
         - Specification: developers/providers/Information Providers/specification.md
       - Claim Issuers:
         - What are they?: developers/providers/Claim Issuers/presentation.md
-        - Get starded: developers/providers/Claim Issuers/get-starded.md
+        - Get started: developers/providers/Claim Issuers/get-started.md
         - Specification: developers/providers/Claim Issuers/specification.md
     - Constants:
       - Claim Types: developers/constants/claim-types.md

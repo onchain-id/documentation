@@ -67,6 +67,11 @@ The response Location will point toward the URI of the Access Grant request, tha
 
 _In the above example, to validate the access grant request, call `POST http://api.identity-service.example.com/access-grants/8hy67-hu79k-gf76hk/validations`._
 
+Information Providers should support at least one of the following authentication methods for Service Providers:
+
+- API Keys.
+- Challenge Signature flow.
+
 ### Synchronous Immediate grant
 
 ```mermaid
@@ -119,10 +124,18 @@ sequenceDiagram
     IP-->>I: confirmation
     IP->>-S: grant notification
 
-    S->>+IP: Request claim data (with API KEY)
-    IP->>IP: Check API KEY access rights
+    S->>+IP: Request claim data (with API KEY or challenge signature)
+    IP->>IP: Check API KEY/challenge access rights
     IP-->>-S: Claim private data
 ```
 
 The *confirmation* response from the Identity Service returns to the requester service the challenge to be signed.
 This means that the service can request the Identity Owner signature without having to wait for the notification to be sent to the user.
+
+## Revoking and monitoring Access Grants
+
+Each **Information Provider** offers different level of access grants control. Some might accept only immediate grants.
+
+Some will allow Identity Owners to see which access grants they emitted, both immediate and persistent, and how they are currently used.
+
+When an Identity Owner revokes an Access Grants, the related service should no longer be able to access the data.
