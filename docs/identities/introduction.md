@@ -1,7 +1,6 @@
 # InvestorID Identities
 
-InvestorID Identities are stored on the BlockChain, in a decentralized way.
-They can't be hidden nor deleted.
+InvestorID Identities are stored on the BlockChain, in a decentralized way. They can't be hidden nor deleted.
 No service or organization can remove your access rights to it, and it spans a lifetime.
 
 Anyone can issue its own Identity, it only takes a bit of knowledge, time, and less than a few cents.
