@@ -4,3 +4,6 @@
 # IDE
 .idea/
 .vscode/
+
+# BUILD
+site/
