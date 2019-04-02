@@ -60,7 +60,7 @@
     }
   },
   "10101000200000": {
-    "id": 10101000100000,
+    "id": 10101000200000,
     "name": "INSTITUTIONAL_INVESTOR",
     "description": "Investor is an institution.",
     "scheme": {
@@ -170,7 +170,7 @@
     }
   },
   "1010102": {
-    "id": 1010101,
+    "id": 1010102,
     "type": "SPECIFIC",
     "name": "SPECIFIC_ACCREDITATION",
     "description": "Investor is accredited by issuer, or status is irrelevant.",
