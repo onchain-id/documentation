@@ -2,6 +2,8 @@
 
 > [https://docs.investorid.org](https://docs.investorid.org)
 
+A live version of master branch can be found here: https://dreamy-bartik-bf6201.netlify.com/
+
 ## Contribute
 
 - Clone the documentation repository: `git clone https://github.com/investorid/documentation`
