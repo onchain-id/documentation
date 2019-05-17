@@ -5,31 +5,30 @@ The blockchain is the underlying technology allowing Bitcoin to work without any
 protocol. Blockchains use a decentralized peer-to-peer network in order to achieve consensus and byzantine fault tolerance, on Bitcoin and Ethereum -
 which are the most used blockchains - this consensus is achieved by proof-of-work which provides a probabilistic solution to the [byzantine 
 generals problem](https://en.wikipedia.org/wiki/Byzantine_fault). <br>
-The blockchain can be seen as a big ledger, containing all the past transactions and consultable by anyone as it is distributed. These transactions are
-contained in "blocks", each block can contain a finite number of transactions and the average time needed to create a new block is fixed
-in the implementation level of the blockchain. As each block is linked to the previous one by a cryptographical proof (the block header of a new block contains the hash of the previous block) the transactions that are processed in a block on the blockchain are immutable, this
-characteristic is necessary when it comes to the use of this technology for transferring value. 
+The blockchain can be seen as a big ledger containing all the past transactions are consultable by anyone as they are on the distributed network. These transactions are
+contained in "blocks", each block can contain a finite number of transactions, and the average time needed to create a new block is fixed
+in the implementation level of the blockchain. As each block is linked to the previous one by a cryptographical proof (the block header of a new block contains the hash of the previous block), the transactions that are processed in a block on the blockchain are immutable. This
+characteristic is necessary for transferring value when using this technology.
 
 # The Ethereum Blockchain<sup>[1](#footnote1)</sup>
 
-The [Ethereum Blockchain](https://github.com/ethereum/wiki/wiki/White-Paper) is an evolution of the Bitcoin blockchain protocol, the 
+The [Ethereum Blockchain](https://github.com/ethereum/wiki/wiki/White-Paper) is an evolution of the Bitcoin blockchain protocol. The 
 first release of the protocol was in 2015 and it evolved a lot since then. The intent of Ethereum is to create an alternative protocol 
-for building decentralized applications, providing a different set of tradeoffs that are very useful for a large class of 
-decentralized applications, with particular emphasis on situations where rapid development time, security for small and rarely used applications, 
-and the ability of different applications to very efficiently interact, are important. Ethereum does this by building what is essentially 
-the ultimate abstract foundational layer: a blockchain with a built-in Turing-complete programming language, allowing anyone to write smart
+for building decentralized applications providing a different set of tradeoffs useful for a large class of 
+decentralized applications with particular emphasis on situations with rapid development time, and useful for the security of small and rarely used applications. Additionally, Ethereum provides the ability to  efficiently interact among applications. Ethereum enables this by building what is essentially 
+the ultimate abstract foundational layer: a blockchain with a built-in Turing-complete programming language allowing anyone to write smart
 contracts and decentralized applications where they can create their own arbitrary rules for ownership, transaction formats and state 
-transition functions. Smart contracts, cryptographic "boxes" that contain value and only unlock it if certain 
-conditions are met, can also be built on top of the platform, with vastly more power than that offered by Bitcoin scripting because of the 
+transition functions. Smart contracts, cryptographic "boxes" that contain value and only unlock if certain 
+conditions are met, can also be built on top of the platform. Smart contracts have vastly more power than that offered by Bitcoin scripting because of the 
 added powers of Turing-completeness, value-awareness, blockchain-awareness and state.
 
 ## The Smart Contracts<sup>[2](#footnote2)</sup>
 
 A smart contract is a computer code running on top of a blockchain containing a set of rules under which the parties to that smart contract agree to interact with each other. If and when the pre-defined rules are met, the agreement is automatically enforced. The smart contract code facilitates, verifies, and enforces the negotiation or performance of an agreement or transaction. It is the simplest form of decentralized automation. <br>
-The term smart contract is a bit unfortunate since a smart contract is neither smart nor are they to be confused with a legal contract. <br>
+The term smart contract is a bit unfortunate since a smart contract is neither smart nor to be confused with a legal contract. <br>
 
-- A smart contract can only be as smart as the people coding taking into account all available information at the time of coding.
-- While smart contracts have the potential to become legal contracts if certain conditions are met, they should not be confused with legal contracts accepted by courts and or law enforcement. However, we will probably see a fusion of legal contracts and smart contracts emerge over the next few years as the technology becomes more mature and widespread and legal standards are adopted.
+- A smart contract can only be as smart as the people coding it, taking into account all available information at the time of coding.
+- While smart contracts have the potential to become legal contracts if certain conditions are met, they should not be confused with legal contracts accepted by courts and or law enforcement. However, we will probably see a fusion of legal contracts and smart contracts emerge over the next few years as the technology  matures and spreads, and legal standards are adopted.
 
 Smart contracts radically reduce transaction costs.  Auto enforceable code – whether on the protocol level or on the application level – standardizes transaction rules, thus reducing the transaction costs of:
 
@@ -37,12 +36,12 @@ Smart contracts radically reduce transaction costs.  Auto enforceable code – w
 - formalization 
 - enforcement 
 
-A smart contract can formalize the relationships between people, institutions and the assets they own. The transaction rulesets (agreement) of the smart contract define the conditions – rights and obligations – to which the parties of a protocol or smart contract consent. It is often predefined, and agreement is reached by simple opt-in actions. This transaction rule set is formalized in digital form, in machine-readable code (formalization). These rights and obligations established in the smart contract can now be automatically executed by a computer or a network of computers as soon as the parties have come to an agreement and met the conditions of the agreement (enforcement). <br>
-The concept of a smart contract is not new. However, Blockchain seems to be the catalyst for smart contract implementation. The most primitive form of a smart contract is a vending machine. The rules of a transaction are programmed into a machine. You select a product by pressing a number related to that product, insert the coins, the machine acts as a smart contract checking wether you inserted enough money, If yes, the machine is programmed to eject the product, and if you inserted too much money, it will also eject the change. If you didn’t insert enough money, or if the machine ran out of the money, you will get your change back. Automatic vending machines not only slashed transaction costs by making human vendors obsolete, but they also expanded service, offering 24/7 availability instead of limited opening hours of a kiosk. <br>
+A smart contract can formalize the relationships between people, institutions and the assets they own. The transaction rulesets (agreement) of the smart contract define the conditions – rights and obligations – to which the parties of a protocol or smart contract consent. It is often predefined, and the agreement is reached by simple opt-in actions. This transaction ruleset is formalized in digital form, in machine-readable code (formalization). The rights and obligations established in the smart contract can now be automatically executed by a computer or a network of computers as soon as the parties have come to an agreement and met the conditions of the agreement (enforcement). <br>
+The concept of a smart contract is not new. However, Blockchain seems to be the catalyst for smart contract implementation. The most primitive form of a smart contract is a vending machine. The rules of a transaction are programmed into a machine. You select a product by pressing a number related to that product, insert the coins, the machine acts as a smart contract checking wether you inserted enough money, If yes, the machine is programmed to eject the product. If you inserted too much money, it will also eject the change. If you didn’t insert enough money, or if the machine ran out of product, you will get your change back. Automatic vending machines not only slashed transaction costs by making human vendors obsolete, they also expanded service, offering 24/7 availability instead of the limited opening hours of a kiosk. <br>
 
 ### Characteristics of a smart contract
 
-Smart contracts are capable of tracking performance in real time and can bring tremendous cost savings. Compliance and controlling happen on the fly. In order to get external information, a smart contract needs [information oracles](https://blockchainhub.net/blockchain-oracles/) , which feed the smart contract with external information. <br>
+Smart contracts are capable of tracking real time performance and bringing tremendous cost savings. Compliance and control happen on the fly. In order to get external information, a smart contract needs [information oracles](https://blockchainhub.net/blockchain-oracles/) which feed the smart contract with external information. <br>
 Smart contracts are : 
 - Self-verifying 
 - Self-executing 
@@ -65,31 +64,31 @@ Smart Contracts can :
 
 ## The T-REX Token Standard
 
-The main goal of the T-REX standard is to create a set of global tools, fully based on blockchain technologies, to allow frictionless and 
-compliant issuance and use of tokenized securities on a peer to peer basis or through marketplaces but in full compliance with regulations 
-and issuers requirements, by embedding controls mechanisms in the tokens themselves. With T-REX, we are implementing a “Compliance by 
+The main goal of the T-REX standard is to create a set of global tools fully based on blockchain technologies. These tools allow the frictionless and 
+compliant issuance and use of tokenized securities on a peer to peer basis or through marketplaces. By embedding control mechanisms in the tokens themselves, these tools remain in full compliance with regulations 
+and issuers requirements. With T-REX, we are implementing a “Compliance by 
 Design” approach where it is simply impossible for an investor to buy a security without being compliant. The regulator itself can verify 
 the compliance of the Issuer through the auditing of the smart contracts that support the Security Token life cycle.
 
 The management of compliant transactions through T-REX backed permission tokens will be based on 3 main pillars creating a decentralized 
 Validator: 
 
-- InvestorID, a blockchain based identity management system, allowing the creation of a globally accessible identity for every stakeholder. 
-- A set of claims, as described in the [ERC-725](https://github.com/ethereum/EIPs/issues/725) and 
+- InvestorID: a blockchain based identity management system allowing the creation of a globally accessible identity for every stakeholder. 
+- A set of claims as described in the [ERC-725](https://github.com/ethereum/EIPs/issues/725) and 
 [ERC-735](https://github.com/ethereum/EIPs/issues/735) standards.
-- A transfer manager whose role is to act as a filter of all the transactions of tokenized securities and which will check the 
-claims of the stakeholders, essentially it will check that the receiver has the rights to receive the tokens following the specific 
+- A transfer manager whose role is to act as a filter of all the transactions of tokenized securities and check the 
+claims of the stakeholders. Essentially it will check that the receiver has the rights to receive the tokens following the specific 
 compliance rules and issuer requirements applicable for this specific asset. The transfer manager will block the transaction if the 
 receiver misses a mandatory claim and will notify him about the reason of the failure. 
 
 These 3 key elements allow issuers to use a decentralized Validator to control transfers and enforce compliance on the holders of the 
-security token he has issued. The Validator includes rules for the whole offering (e.g. managing the max number of holders allowed in a 
-specific markets, when such rule apply), and rules for each investors (e.g. KYC or issuer-defined eligibility criteria) thanks to the 
+security token he issued. The Validator includes rules for the whole offering (e.g. managing the max number of holders allowed in a 
+specific markets, when such rule apply) and rules for each investors (e.g. KYC or issuer-defined eligibility criteria) thanks to the 
 identity management system.
 
 ### Constraints for Tokenized Securities
 
-Although, so far, the rules applicable to issuing and holding utility tokens were largely undefined - or at least very vague - in most countries, an STO consists in the issuance of a security that uses the blockchain technology as its registry, proof of ownership and transfer infrastructure. Such instrument is regulated in every country and, as a consequence, STOs have to comply with the related regulations of the country where the security token is issued as well as those of the countries where it is distributed (sold). 
+Although so far the rules applicable to issuing and holding utility tokens are largely undefined or very vague in most countries, STOs have to comply with the related regulations of the country where the security token is issued as well as those of the countries where it is distributed (sold). In fact, STOs consist in the issuance of a security that uses the blockchain technology as its registry, proof of ownership and transfer infrastructure. STOs are thus securities which, as financial instruments, are regulated in every country.
 
 Characteristics | Utility Token | Security Token
 :---: | :---: | :---:
@@ -98,7 +97,7 @@ Regulation | Non existing or vague in most cases | Stringent as existing securit
 Lifecycle | Simple | As complex as a security
 Secondary Market | Nearly no constraints | As complex as a security
 
-Another significant difference between ICOs and STOs is related to the token lifecycle. ICOs - dealing with utility tokens - result in the issuance of tokens having a relatively simple life cycle: once the token is shared among a decentralized network, its governance is mostly the results of its token economics. As to security tokens, it is quite different, as the issuer - or its appointed agent - remains generally liable for applying a number of controls to his token after issuance and during the entire “life” of its security token. In addition, he might need to apply a number of corporate actions (dividend/interests payments, … ) or corporate events (calling for an AGM/EGM, …) to its token which further increase the need for the issuer to keep in touch with (keep some control on) the investors in his token.
+Another significant difference between ICOs and STOs is related to the token lifecycle. ICOs - dealing with utility tokens - result in the issuance of tokens having a relatively simple life cycle: once the token is shared among a decentralized network, its governance is mostly the results of its token economics. As to security tokens, it is quite different. The issuer - or its appointed agent - remains generally liable for applying a number of controls to his token after issuance and during the entire “life” of its security token. In addition, he might need to apply a number of corporate actions (dividend/interests payments, … ) or corporate events (calling for an AGM/EGM, …) to its token which further increases the need for the issuer to keep in touch with (keep some control on) the investors in his token.
 
 One could identify two main types of control requirements related to the issuance, the holding and the transfer of security tokens :
 - One relates to regulations applicable to the security considered, that are independent of the security token itself (i.e. general rules). For example, the need to identify the investor, to collect a proof of his identity, to check his name against blacklists, i.e. generally speaking, control requirements related to AML/KYC, or other applicable regulatory rules.
