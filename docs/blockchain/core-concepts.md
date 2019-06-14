@@ -55,7 +55,7 @@ Smart Contracts can :
 - Lower transaction costs
 
 <figure>
-  <img src="./../images/smart-contracts.png" width="800" title="smart contracts characteristics">
+  <img src="../images/smart-contracts.png" width="800" title="smart contracts characteristics">
 </figure>
 
 ## The ERC-20 Token Standard
