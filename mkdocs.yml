@@ -42,7 +42,16 @@ nav:
   - Home: index.md
   - Introduction: introduction.md
   - BlockChain:
-    - Main concepts: blockchain/core-concepts.md
+    - What is Blockchain?: blockchain/blockchain-intro.md
+    - Ethereum Blockchain: blockchain/ethereum.md
+    - Smart contracts: blockchain/smart-contracts.md
+    - Tokens:
+      - ERC-20 Tokens: blockchain/ERC-20.md
+      - T-REX Tokens:
+        - The T-REX Standard: blockchain/T-REX.md
+        - Tokenizing Securities: blockchain/Constraints-securities.md
+        - Permissioned Tokens: blockchain/permissioned-tokens.md
+        - On-chain Identities: blockchain/identity-management.md
   - Identities:
     - What is an Identity: identities/introduction.md
     - Basic Information: identities/information.md
@@ -51,22 +60,19 @@ nav:
     - Sharing data: identities/grants.md
   - Developers:
     - Developers HomePage: developers/developers.md
-    - SDKs:
-      - The Identity SDK:
-        - Home: developers/sdks/identity-sdk/identity-sdk.md
-        - Get Started: developers/sdks/identity-sdk/get-started.md
-        - Configuration: developers/sdks/identity-sdk/configuration.md
-        - BlockChain Providers: developers/sdks/identity-sdk/blockchain-providers.md
-        - Signing Challenges: developers/sdks/identity-sdk/signer-module.md
-        - Examples: developers/sdks/identity-sdk/examples.md
+    - The Identity SDK:
+      - Home: developers/sdks/identity-sdk/identity-sdk.md
+      - Get Started: developers/sdks/identity-sdk/get-started.md
+      - Configuration: developers/sdks/identity-sdk/configuration.md
+      - BlockChain Providers: developers/sdks/identity-sdk/blockchain-providers.md
+      - Signing Challenges: developers/sdks/identity-sdk/signer-module.md
+      - Examples: developers/sdks/identity-sdk/examples.md
     - Providers:
       - Information Providers:
         - What are they?: developers/providers/Information Providers/presentation.md
-        - Get started: developers/providers/Information Providers/get-started.md
         - Specification: developers/providers/Information Providers/specification.md
       - Claim Issuers:
         - What are they?: developers/providers/Claim Issuers/presentation.md
-        - Get started: developers/providers/Claim Issuers/get-started.md
         - Specification: developers/providers/Claim Issuers/specification.md
     - Constants:
       - Claim Types: developers/constants/claim-types.md
