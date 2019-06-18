@@ -30,9 +30,7 @@ Smart Contracts can :
 - Reduce reliance on trusted intermediaries
 - Lower transaction costs
 
-<p align="center">
-  <img src="../images/smart-contracts.png" width="800" title="smart contracts characteristics">
-</p>
+![smart contracts characteristics](images/smart-contracts.png)
 
 <br>
 <br>
