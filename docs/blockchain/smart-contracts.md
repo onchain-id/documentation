@@ -31,7 +31,7 @@ Smart Contracts can :
 - Lower transaction costs
 
 <p align="center">
-  <img src="https://github.com/tokenyICO/investorid-documentation/blob/master/docs/images/smart-contracts.png?raw=true" width="800" title="smart contracts characteristics">
+  <img src="../images/smart-contracts.png" width="800" title="smart contracts characteristics">
 </p>
 
 <br>
