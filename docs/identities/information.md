@@ -8,7 +8,7 @@ name, email address, postal address, country, website, and maybe others piece of
 A service that stores and diffuse information about an Identity is called an **Information Provider**.
 
 Any **Service Provider** is able to request these information from the *Information Provider*. 
-t will respond the data only if the Service Provider is allowed to access the information. 
+It will respond the data only if the Service Provider is allowed to access the information. 
 The Identity Owner has a complete control over what information are shared with which services.
 
 Some Information Provider will notify the Identity Owner when an access request is emitted, some will not.
