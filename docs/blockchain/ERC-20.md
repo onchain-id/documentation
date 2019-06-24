@@ -1,4 +1,4 @@
-# The ERC-20 Token Standard
+<h1>The ERC-20 Token Standard</h1>
 
 [ERC-20](https://eips.ethereum.org/EIPS/eip-20) is a token standard first proposed by Vitalik Buterin in June 2015. It is a simple interface 
 that allows for the creation of tokens on Ethereum that can be re-used by other applications, from wallets to decentralized exchanges. 
