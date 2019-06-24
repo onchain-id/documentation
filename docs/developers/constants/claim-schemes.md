@@ -1,4 +1,4 @@
-# Claim Types
+# Claim Schemes
 
 These are the list of claim schemes that are standard for InvestorID Identities and some other standards like T-REX.
 
