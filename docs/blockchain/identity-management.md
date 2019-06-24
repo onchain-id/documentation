@@ -1,4 +1,4 @@
-### On-chain identity management
+# On-chain identity management
 
 As mentioned before, by essence, a security token being subject to a stringent governance, its distribution has to follow all the applicable regulations and, in particular, those aspects related to KYC rules. In that respect, we believe that identity management is key to implement such compliance on the blockchain. 
 

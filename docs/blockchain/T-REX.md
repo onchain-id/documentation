@@ -1,4 +1,4 @@
-## The T-REX Token Standard
+# The T-REX Token Standard
 
 The main goal of the T-REX standard is to create a set of global tools, fully based on blockchain technologies, to allow frictionless and 
 compliant issuance and use of tokenized securities on a peer to peer basis or through marketplaces but in full compliance with regulations 
