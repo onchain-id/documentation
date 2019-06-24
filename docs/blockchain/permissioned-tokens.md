@@ -1,4 +1,4 @@
-### Necessity of Permissioned Tokens
+# Necessity of Permissioned Tokens
 
 All the experts of the sector agree on the point that only permissioned tokens are suitable to issue security tokens because there 
 cannot be a total, uncontrolled, freedom of the transaction in such instruments and, investors need to comply with a number of 
