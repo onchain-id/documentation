@@ -1,4 +1,4 @@
-### Constraints for Tokenized Securities
+# Constraints for Tokenized Securities
 
 Although, so far, the rules applicable to issuing and holding utility tokens were largely undefined - or at least very vague - in most
 countries, an STO consists in the issuance of a security that uses the blockchain technology as its registry, proof of ownership and 
