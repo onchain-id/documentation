@@ -2,8 +2,6 @@
 
 > [https://docs.investorid.org](https://docs.investorid.org)
 
-A live version of master branch can be found here: https://docs.investorid.tokeny.com/
-
 ## Contribute
 
 - Clone the documentation repository: `git clone https://github.com/investorid/documentation`
