@@ -2,7 +2,7 @@
 
 ## Installation
 
-Install with `npm install @investorid/identity-sdk`
+Install with `npm install @investorid/identity-sdk` (IMPORTANT : the SDK is not yet publicly available so the command here is not yet activated, it will come very soon)
 
 Then require with:
 ```javascript
