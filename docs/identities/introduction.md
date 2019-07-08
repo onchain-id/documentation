@@ -4,7 +4,7 @@ InvestorID Identities are stored on the Ethereum public BlockChain, in a decentr
 No service or organization can remove your access rights to it, and it spans a lifetime.
 
 Identities are Smart Contract, deployed on the Ethereum Main Network.
-Any implementation standard to the ERC734 and ERC725 proposals are supported by the InvestorID standard, and thus with
+Any implementation standard to the ERC734 and ERC735 proposals are supported by the InvestorID standard, and thus with
 any service that supports the InvestorID standard.
 
 Yet, an Identity has no value itself. This is the information (claims) attached to it that gives credit to the identity.
