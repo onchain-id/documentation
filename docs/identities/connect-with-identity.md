@@ -1,6 +1,6 @@
-# Connect with investorID
+# Connect with OnchainID
 
-An InvestorID allows to login to a website using your Identity as it is possible with Social Providers.
+An OnchainID allows to login to a website using your Identity as it is possible with Social Providers.
 
 When an user attempt to login, the server generates a challenge to be signed using a wallet linked to the Identity.
 The server has the possibility to request access to some Information and Claims about the Identity.
@@ -27,7 +27,7 @@ Refer to the [Sharing data](grants.md) section for more information about access
 
 ```mermaid
 graph TD
-  A(Arrival on SignIn) -->|clicks on 'Connect with InvestorID'| B
+  A(Arrival on SignIn) -->|clicks on 'Connect with OnchainID'| B
   B(Load Identity)
   B --> C{Attempt to detect provider}
   C -->|Detected| D(Ask for confirmation)
