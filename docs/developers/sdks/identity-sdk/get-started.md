@@ -2,11 +2,11 @@
 
 ## Installation
 
-Install with `npm install @onchainid/identity-sdk` (IMPORTANT : the SDK is not yet publicly available so the command here is not yet activated, it will come very soon)
+Install with `npm install @onchain-id/identity-sdk` (IMPORTANT : the SDK is not yet publicly available so the command here is not yet activated, it will come very soon)
 
 Then require with:
 ```javascript
-const IdentitySDK = require('@onchainid/identity-sdk');
+const IdentitySDK = require('@onchain-id/identity-sdk');
 ```
 
 ## Load an Identity
