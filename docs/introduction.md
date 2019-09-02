@@ -1,14 +1,14 @@
 # Identity ecosystem for digital assets holders
 
-## What is InvestorID?
+## What is OnchainID?
 
-**InvestorID identities** are smart contracts deployed on the [*BlockChain*](blockchain/core-concepts.md).
+**OnchainID identities** are smart contracts deployed on the [*BlockChain*](blockchain/core-concepts.md).
 
 Their *address* is a unique identifier that can safely be used by service provider to identify their owner, and even to sign challenges like [*direct authentication on a website*](identities/connect-with-identity.md).
 
 [**Claims**](identities/claims.md) can be attached to prove compliance with a tokenized asset requirements.
 
-An InvestorID identity allows an investor to truly own its identity, whilst allowing trusted services to emit claims for it. The data associated with the identity and its claims are under the control of the investor who can share them with other service providers.
+An OnchainID identity allows an investor to truly own its identity, whilst allowing trusted services to emit claims for it. The data associated with the identity and its claims are under the control of the investor who can share them with other service providers.
 
 They are fully compatible with every security token based on the [T-REX standard](https://github.com/TokenySolutions/T-REX) (Token for Regulated EXchanges).
 
@@ -21,4 +21,4 @@ They are fully compatible with every security token based on the [T-REX standard
 ## What should be expected of this documentation?
 
 This documentation introduces the concept of a BlockChain Identity, and demonstrate some of its use-case.
-It also contains the documentation for several tools related to InvestorID Identities such as the [Identity SDK](developers/sdks/identity-sdk/identity-sdk.md).
+It also contains the documentation for several tools related to OnchainID Identities such as the [Identity SDK](developers/sdks/identity-sdk/identity-sdk.md).
