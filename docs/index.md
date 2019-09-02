@@ -1,12 +1,12 @@
 # Home
 
-Welcome to the official documentation for the [InvestorID organization]({{ links.investorid }}).
+Welcome to the official documentation for the [OnchainID organization]({{ links.onchainid }}).
 
 <p align="center">
-  <a href="{{ links.investorid }}" target="_blank">
-  <img src="./images/InvestorID_logo.png" width="200" title="InvestorID_Logo">
+  <a href="{{ links.onchainid }}" target="_blank">
+  <img src="./images/OnchainID_logo.png" width="200" title="OnchainID_Logo">
   </a>
 </p>
 
-Learn more about InvestorID on the [official website]({{ links.investorid }}).
+Learn more about OnchainID on the [official website]({{ links.onchainid }}).
 
