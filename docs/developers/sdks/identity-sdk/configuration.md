@@ -7,6 +7,6 @@ A claim that has an uri which is not an HTTPS endpoint won't be retrieved.
 Allow unsecured endpoints with:
 
 ```javascript
-const IdentitySDK = require('@onchainid/identity-sdk');
+const IdentitySDK = require('@onchain-id/identity-sdk');
 IdentitySDK.config({ allowUnsecuredProviders: true });
 ``` 
