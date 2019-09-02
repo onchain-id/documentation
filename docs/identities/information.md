@@ -1,6 +1,6 @@
 # Basic Information of Identities
 
-An InvestorID Identity has a unique identifier: its address.
+An OnchainID Identity has a unique identifier: its address.
 Many services can store information about an Identity, while keeping these information outside the blockchain.
 
 For instance, the service that deployed the Identity will probably store
