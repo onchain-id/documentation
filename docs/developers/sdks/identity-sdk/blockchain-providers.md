@@ -1,6 +1,6 @@
 # BlockChain Provider
 
-It is recommended that you connect with a BlockChain Provider to retrieve information directly from the BlockChaim.
+It is recommended that you connect with a BlockChain Provider to retrieve information directly from the BlockChain.
 If you don't intend to validate data with the BlockChain but to only use an Identity Provider, you can pass this step.
 
 The SDK is using [Ethers](https://github.com/ethers-io/ethers.js) to connect with Ethereum network.
