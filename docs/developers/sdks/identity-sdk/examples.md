@@ -5,7 +5,7 @@
 You can also call function from the smart contract using the `Identity.instance` property.
 
 ```javascript
-const IdentitySDK = require('@investorid/identity-sdk');
+const IdentitySDK = require('@onchain-id/identity-sdk');
 const Ethers = require('ethers');
 
 const provider = Ethers.getDefaultProvider('ropsten');
@@ -25,7 +25,7 @@ All functions from the [ERC734](https://github.com/ethereum/eips/issues/734) and
 ## Get keys of an Identity
 
 ```javascript
-const IdentitySDK = require('@nakasar/identity-sdk');
+const IdentitySDK = require('@onchain-id/identity-sdk');
 
 const Ethers = require('ethers');
 
@@ -45,7 +45,7 @@ const identity = new IdentitySDK.Identity('0xadD92F8Ef0729E969c5a98Ea5740c9b644B
 ## Deploy an identity
 
 ```javascript
-const IdentitySDK = require('@nakasar/identity-sdk');
+const IdentitySDK = require('@onchain-id/identity-sdk');
 
 const Ethers = require('ethers');
 
@@ -63,7 +63,7 @@ const wallet = new Ethers.Wallet(PRIVATE_KEY, provider);
 ## Get details of a claim with an Claim Issuer
 
 ```javascript
-const IdentitySDK = require('@nakasar/identity-sdk');
+const IdentitySDK = require('@onchain-id/identity-sdk');
 
 const Ethers = require('ethers');
 

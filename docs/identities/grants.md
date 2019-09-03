@@ -2,7 +2,7 @@
 
 ## Concept
 
-InvestorID gives the Identity Owner the control of his/her Identity.
+OnchainID gives the Identity Owner the control of his/her Identity.
 When an Identity Owner decides to share information about the Identity with a third-party service,
 an explicit signature of an access challenge is requested.
 

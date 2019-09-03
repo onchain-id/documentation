@@ -1,11 +1,11 @@
-# InvestorID Identities
+# OnchainID Identities
 
-InvestorID Identities are stored on the Ethereum public BlockChain, in a decentralized way. They can't be hidden nor deleted.
+OnchainID Identities are stored on the Ethereum public BlockChain, in a decentralized way. They can't be hidden nor deleted.
 No service or organization can remove your access rights to it, and it spans a lifetime.
 
 Identities are Smart Contract, deployed on the Ethereum Main Network.
-Any implementation standard to the ERC734 and ERC735 proposals are supported by the InvestorID standard, and thus with
-any service that supports the InvestorID standard.
+Any implementation standard to the ERC734 and ERC735 proposals are supported by the OnchainID standard, and thus with
+any service that supports the OnchainID standard.
 
 Yet, an Identity has no value itself. This is the information (claims) attached to it that gives credit to the identity.
 
@@ -21,7 +21,7 @@ The Claim Issuer will store the claim **Private Data** on its *off-chain* server
 Therefore, anyone knows that the identity has been successfully checked by a trusted third party.
 But to access the data, one would need the explicit consent of the *Identity Owner* allowing the consultation of the private data.
 
-## What can I do with an InvestorID?
+## What can I do with an OnchainID?
 
 - Log in to compatible websites without any password, using an hadrware security key or a plugin (e.g. Metamask).
 - Participate in compliant regulated tokenized assets offerings, and exchange security tokens in a decentralized way in full compliance.

@@ -11,4 +11,4 @@ remains fully compatible with with it and all the available exchanges and tools 
 
 Most of the “Security token protocols” promoted in the industry so far are permissioned tokens. The transfer function is modified and 
 requests a transfer approval from an external validator service to control the transfer of tokens. 
-T-REX involves an on-chain identity management system (InvestorID) allowing issuers to control the transfer of ownership directly on-chain.
+T-REX involves an on-chain identity management system (OnchainID) allowing issuers to control the transfer of ownership directly on-chain.

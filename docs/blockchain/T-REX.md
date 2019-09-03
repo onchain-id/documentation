@@ -9,7 +9,7 @@ the compliance of the Issuer through the auditing of the smart contracts that su
 The management of compliant transactions through T-REX backed permission tokens will be based on 3 main pillars creating a decentralized 
 Validator: 
 
-- InvestorID, a blockchain based identity management system, allowing the creation of a globally accessible identity for every stakeholder. 
+- OnchainID, a blockchain based identity management system, allowing the creation of a globally accessible identity for every stakeholder. 
 - A set of claims, as described in the [ERC-734](https://github.com/ethereum/EIPs/issues/734) and 
 [ERC-735](https://github.com/ethereum/EIPs/issues/735) standards.
 - A transfer manager whose role is to act as a filter of all the transactions of tokenized securities and which will check the 

@@ -1,10 +1,10 @@
-site_name: InvestorID Documentation
-site_description: 'Official documentation for the InvestorID solution, an Identity ecosystem for digital assets holders to create blockchain identities to access and trade compliant digital assets.'
-site_author: 'InvestorID Organization'
-site_url: 'https://investorid.org'
-copyright: 'Copyright &copy; 2019 - Investor ID'
-repo_name: 'investorid/documentation'
-repo_url: 'https://github.com/investorid/documentation'
+site_name: OnchainID Documentation
+site_description: 'Official documentation for the OnchainID solution, an Identity ecosystem for digital assets holders to create blockchain identities to access and trade compliant digital assets.'
+site_author: 'OnchainID Organization'
+site_url: 'https://onchainid.com'
+copyright: 'Copyright &copy; 2019 - Onchain ID'
+repo_name: 'onchain-id/documentation'
+repo_url: 'https://github.com/onchain-id/documentation'
 theme:
   name: 'material'
   custom_dir: 'theme/'
@@ -17,13 +17,13 @@ theme:
   logo:
     icon: 'chrome_reader_mode'
   language: 'en'
-  favicon: 'images/InvestorID_icon.png'
+  favicon: 'images/OnchainID_icon.png'
 extra:
   social:
     - type: 'github'
-      link: 'https://github.com/InvestorID'
+      link: 'https://github.com/onchain-id'
   links:
-    investorid: 'http://investorid.org'
+    onchainid: 'http://onchainid.com'
 extra_css:
   - 'stylesheets/extra.css'
   - 'https://unpkg.com/mermaid@7.1.2/dist/mermaid.css'
