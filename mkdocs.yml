@@ -2,7 +2,7 @@ site_name: OnchainID Documentation
 site_description: 'Official documentation for the OnchainID solution, an Identity ecosystem for digital assets holders to create blockchain identities to access and trade compliant digital assets.'
 site_author: 'OnchainID Organization'
 site_url: 'https://onchainid.com'
-copyright: 'Copyright &copy; 2019 - Onchain ID'
+copyright: 'Copyright &copy; 2019 - tokeny solutions'
 repo_name: 'onchain-id/documentation'
 repo_url: 'https://github.com/onchain-id/documentation'
 theme:
