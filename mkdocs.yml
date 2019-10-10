@@ -75,7 +75,7 @@ nav:
         - What are they?: developers/providers/Claim Issuers/presentation.md
         - Specification: developers/providers/Claim Issuers/specification.md
     - Constants:
-      - Claim Types: developers/constants/claim-types.md
+      - Claim Topics: developers/constants/claim-topics.md
       - Claim Schemes: developers/constants/claim-schemes.md
       - Information Types: developers/constants/information-types.md
   - About:
