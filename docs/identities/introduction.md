@@ -18,10 +18,10 @@ For example, a Claim Issuer could emit a claim saying that a given Identity has 
 
 Of course, sensitive information such as the ID card number or the picture itself are not stored on the blockchain publicly.
 The Claim Issuer will store the claim **Private Data** on its *off-chain* servers, and will publish publicly *on-chain* a signature.
-Therefore, anyone knows that the identity has been successfully checked by a trusted third party.
+Therefore, anyone knows that a trusted third party has successfully checked the identity.
 But to access the data, one would need the explicit consent of the *Identity Owner* allowing the consultation of the private data.
 
 ## What can I do with an OnchainID?
 
-- Log in to compatible websites without any password, using an hadrware security key or a plugin (e.g. Metamask).
+- Log in to compatible websites without any password, using an hardware security key or a plugin (e.g. Metamask).
 - Participate in compliant regulated tokenized assets offerings, and exchange security tokens in a decentralized way in full compliance.
