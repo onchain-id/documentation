@@ -1,6 +1,6 @@
 ### SignerModule
 
-Many interaction with identities, and especially accessing claims, require to sign a challenge message.
+Many interactions with identities, and especially accessing claims, require to sign a challenge message.
 Functions requiring these signatures expect a SignerModule as argument.
 
 A SignerModule must expose a `.getPublicKey()` and a `.signMessage(message: string)` functions.
