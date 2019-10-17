@@ -8,7 +8,7 @@ They are stored in a **ClaimHolder contract (ERC735)** owned by an **Identity (E
     
 Issued claims can be removed from a ClaimHolder by:
 * Identity Owner (has the ability to remove ANY claim),
-* Issuer of the claim to be removed,_or technically anyone the Identity Owner allowed to manage claims on its identity (CLAIM key or above)._
+* Issuer of the claim to be removed, _or technically anyone the Identity Owner allowed to manage claims on its identity (CLAIM key or above)._
 
 **_Note that there are NO WAY to verify that the identity is strictly compliant with the standard._**
     
