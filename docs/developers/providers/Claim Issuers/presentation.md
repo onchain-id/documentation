@@ -1,7 +1,7 @@
 # Introduction to Claim Issuers
 
 A Claim Issuer is a service provider that has the technical ability to emit or validate information about an Identity.
- _For instance, Tax offices can validate/emit the tax number of a personn using its identity data._
+ _For instance, Tax offices can validate/emit the tax number of a person using their identity data._
  They may require payment in exchange of the checks.  
   
 Claims can be generic
@@ -11,12 +11,12 @@ _(is the identity owner conform to a set of criteria? Is it arbitrary approved b
   
 Claims usually hold private sensitive data, and these data MUST NOT be accessible publicly.
 These data should be referenced in the blockchain claim with a hash and unique identifier
-and uri that allows anyone to access the claim data, provided that the request emitter has the right to access them.
+and URI that allows anyone to access the claim data, provided that the request emitter has the right to access them.
 As the User is the owner of the data, he/she should be the only one to manage the access rights to these data.
 Other services may request access from him/her.  
-  
-To be a Claim issuer, a service must be able to generate (or use) one or several private key that will be used to
-sign the claim issued, and must implement a service to emit transactions on the Identity contract in order to add
+
+To be a Claim issuer, a service must be able to generate (or use) one or several private keys that will be used to
+sign the claim issued, and must implement a service to emit transactions on the Identity contract to add
 claims. This is the bare minimum. There are some **Claim Issuer SDK** which handle the blockchain part after being
 configured to use the Claim Issuer wallet key and its private claim signing key.  
   
@@ -34,7 +34,7 @@ Sometimes, claims needs to hold data that cannot be put on the blockchain.
 The Claim issuer needs to store these private claim data somewhere (digital or not).
 Some Information Providers allows Claim Issuer to store claim data in their databases.
 The SDK implements methods to store and retrieve these.
-You must have the explicit consent of the User in order to share the data with an Information Provider
+You must have the explicit consent of the user to share the data with an Information Provider
 or another service such as a Token Issuer.
 Some Information Providers handle the access rights management
 _(checking rights, allow the user to manage these rights, ...)_.  
@@ -52,6 +52,6 @@ Most SDK provides all methods required to request and access these information.
 
 Whatever types of claims the service will issue, it must implement the following features:
 
-- Ability to publish claim on the BlockChain.
-- Manage a Claim Registry on the BlockChain (optional).
+- Ability to publish a claim on the Blockchain.
+- Manage a Claim Registry on the Blockchain (optional).
 - Manage access grants to data of a claim.
