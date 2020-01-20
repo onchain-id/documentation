@@ -6,8 +6,6 @@ A JSON description of these topics, completed with the parsing method descriptio
 
 | Claim Topic     | Name                          | Description                                                                                 | Scheme                            | Data                                                   |
 | :------------- | :---------------------------- | ------------------------------------------------------------------------------------------: | --------------------------------: | -----------------------------------------------------: |
-| 10101000042003 | **FIRST_NAME_CLEAR**          | _First name in clear text._                                                                 | [URL_ENCODED](claim-schemes.md)   | `firstName=VALUE`                                      |
-| 10101000042004 | **LAST_NAME_CLEAR**           | _Last name in clear text._                                                                  | [URL_ENCODED](claim-schemes.md)   | `lastName=VALUE`                                       |
 | 10101000100000 | **INDIVIDUAL_INVESTOR**       | _Investor is an individual._                                                                | [EMPTY](claim-schemes.md)         | `true`                                                 |
 | 10101000100001 | **BASIC_IDENTITY**            | _Combination of name, gender and birth date, **hashed**._                                   | [STRING](claim-schemes.md)        | `0x0999ddefa34bc...`                                   |
 | 10101000100002 | **CONTACT_ADDRESS**           | _Combination of residence, email, phone, **hashed**._                                       | [STRING](claim-schemes.md)        | `0x0999ddefa34bc...`                                   |
