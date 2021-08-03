@@ -18,9 +18,16 @@ export default {
       "items": [
         {
           "type": "doc",
-          "docId": "intro",
+          "docId": "onchainid/intro",
           "position": "left",
-          "label": "Tutorial",
+          "label": "Concepts",
+          "activeSidebarClassName": "navbar__link--active"
+        },
+        {
+          "type": "doc",
+          "docId": "developers/intro",
+          "position": "left",
+          "label": "Developers",
           "activeSidebarClassName": "navbar__link--active"
         },
         {

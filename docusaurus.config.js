@@ -22,9 +22,15 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'intro',
+          docId: 'onchainid/intro',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Concepts',
+        },
+        {
+          type: 'doc',
+          docId: 'developers/intro',
+          position: 'left',
+          label: 'Developers',
         },
         {
           href: 'https://github.com/onchaind-id/documentation',

@@ -8,12 +8,17 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "intro",
+          "mainDocId": "developers/intro",
           "docs": [
             {
-              "id": "intro",
-              "path": "/docs/intro",
-              "sidebar": "tutorialSidebar"
+              "id": "developers/intro",
+              "path": "/docs/developers/intro",
+              "sidebar": "developers"
+            },
+            {
+              "id": "onchainid/intro",
+              "path": "/docs/onchainid/intro",
+              "sidebar": "concepts"
             }
           ]
         }
