@@ -31,6 +31,13 @@ export default {
           "activeSidebarClassName": "navbar__link--active"
         },
         {
+          "type": "doc",
+          "docId": "about/license",
+          "position": "left",
+          "label": "About",
+          "activeSidebarClassName": "navbar__link--active"
+        },
+        {
           "href": "https://github.com/onchain-id/documentation",
           "label": "GitHub",
           "position": "right"

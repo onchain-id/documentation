@@ -11,6 +11,11 @@
           "mainDocId": "developers/intro",
           "docs": [
             {
+              "id": "about/license",
+              "path": "/docs/about/license",
+              "sidebar": "about"
+            },
+            {
               "id": "concepts/intro",
               "path": "/docs/concepts/intro",
               "sidebar": "concepts"

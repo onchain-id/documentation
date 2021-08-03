@@ -18,6 +18,13 @@
         "label": "Introduction to ONCHAINID concepts",
         "href": "/docs/concepts/intro"
       }
+    ],
+    "about": [
+      {
+        "type": "link",
+        "label": "License",
+        "href": "/docs/about/license"
+      }
     ]
   }
 }

@@ -50,8 +50,14 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','05c'),
+    component: ComponentCreator('/docs','632'),
     routes: [
+      {
+        path: '/docs/about/license',
+        component: ComponentCreator('/docs/about/license','dcc'),
+        exact: true,
+        'sidebar': "about"
+      },
       {
         path: '/docs/concepts/intro',
         component: ComponentCreator('/docs/concepts/intro','e01'),

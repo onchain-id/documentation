@@ -33,6 +33,12 @@ module.exports = {
           label: 'Developers',
         },
         {
+          type: 'doc',
+          docId: 'about/license',
+          position: 'left',
+          label: 'About',
+        },
+        {
           href: 'https://github.com/onchain-id/documentation',
           label: 'GitHub',
           position: 'right',
