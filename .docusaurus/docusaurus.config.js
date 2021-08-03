@@ -18,13 +18,27 @@ export default {
       "items": [
         {
           "type": "doc",
-          "docId": "intro",
+          "docId": "concepts/intro",
           "position": "left",
-          "label": "Tutorial",
+          "label": "Concepts",
           "activeSidebarClassName": "navbar__link--active"
         },
         {
-          "href": "https://github.com/onchaind-id/documentation",
+          "type": "doc",
+          "docId": "developers/intro",
+          "position": "left",
+          "label": "Developers",
+          "activeSidebarClassName": "navbar__link--active"
+        },
+        {
+          "type": "doc",
+          "docId": "about/license",
+          "position": "left",
+          "label": "About",
+          "activeSidebarClassName": "navbar__link--active"
+        },
+        {
+          "href": "https://github.com/onchain-id/documentation",
           "label": "GitHub",
           "position": "right"
         }

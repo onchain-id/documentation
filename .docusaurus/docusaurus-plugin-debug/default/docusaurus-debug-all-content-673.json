@@ -14,33 +14,72 @@
           "sidebarFilePath": "/Users/kevinthizy/Documents/DEV/TokenY/onchainid-documentation/sidebars.js",
           "contentPath": "/Users/kevinthizy/Documents/DEV/TokenY/onchainid-documentation/docs",
           "contentPathLocalized": "/Users/kevinthizy/Documents/DEV/TokenY/onchainid-documentation/i18n/en/docusaurus-plugin-content-docs/current",
-          "mainDocId": "intro",
+          "mainDocId": "developers/intro",
           "sidebars": {
-            "tutorialSidebar": [
+            "developers": [
               {
                 "type": "doc",
-                "id": "intro"
+                "id": "developers/intro"
+              }
+            ],
+            "concepts": [
+              {
+                "type": "doc",
+                "id": "concepts/intro"
+              }
+            ],
+            "about": [
+              {
+                "type": "doc",
+                "id": "about/license"
               }
             ]
           },
           "docs": [
             {
-              "unversionedId": "intro",
-              "id": "intro",
+              "unversionedId": "about/license",
+              "id": "about/license",
               "isDocsHomePage": false,
-              "title": "Introduction",
-              "description": "",
-              "source": "@site/docs/intro.md",
-              "sourceDirName": ".",
-              "slug": "/intro",
-              "permalink": "/docs/intro",
-              "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/intro.md",
+              "title": "License",
+              "description": "ONCHAINID core materials are under the GNU General Public License, version 3, as defined below:",
+              "source": "@site/docs/about/license.md",
+              "sourceDirName": "about",
+              "slug": "/about/license",
+              "permalink": "/docs/about/license",
+              "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/about/license.md",
               "version": "current",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar"
+              "frontMatter": {},
+              "sidebar": "about"
+            },
+            {
+              "unversionedId": "concepts/intro",
+              "id": "concepts/intro",
+              "isDocsHomePage": false,
+              "title": "Introduction to ONCHAINID concepts",
+              "description": "",
+              "source": "@site/docs/concepts/intro.md",
+              "sourceDirName": "concepts",
+              "slug": "/concepts/intro",
+              "permalink": "/docs/concepts/intro",
+              "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/concepts/intro.md",
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "concepts"
+            },
+            {
+              "unversionedId": "developers/intro",
+              "id": "developers/intro",
+              "isDocsHomePage": false,
+              "title": "Developers, welcome",
+              "description": "",
+              "source": "@site/docs/developers/intro.md",
+              "sourceDirName": "developers",
+              "slug": "/developers/intro",
+              "permalink": "/docs/developers/intro",
+              "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/developers/intro.md",
+              "version": "current",
+              "frontMatter": {},
+              "sidebar": "developers"
             }
           ]
         }

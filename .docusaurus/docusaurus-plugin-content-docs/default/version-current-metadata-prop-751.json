@@ -5,11 +5,25 @@
   "banner": "none",
   "isLast": true,
   "docsSidebars": {
-    "tutorialSidebar": [
+    "developers": [
       {
         "type": "link",
-        "label": "Introduction",
-        "href": "/docs/intro"
+        "label": "Developers, welcome",
+        "href": "/docs/developers/intro"
+      }
+    ],
+    "concepts": [
+      {
+        "type": "link",
+        "label": "Introduction to ONCHAINID concepts",
+        "href": "/docs/concepts/intro"
+      }
+    ],
+    "about": [
+      {
+        "type": "link",
+        "label": "License",
+        "href": "/docs/about/license"
       }
     ]
   }
