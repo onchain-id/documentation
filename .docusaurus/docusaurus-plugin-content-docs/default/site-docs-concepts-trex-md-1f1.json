@@ -1,0 +1,26 @@
+{
+  "unversionedId": "concepts/trex",
+  "id": "concepts/trex",
+  "isDocsHomePage": false,
+  "title": "Application : T-REX tokens",
+  "description": "",
+  "source": "@site/docs/concepts/trex.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/trex",
+  "permalink": "/docs/concepts/trex",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/concepts/trex.md",
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Onchain Identities",
+    "permalink": "/docs/concepts/onchainIdentities"
+  },
+  "next": {
+    "title": "Identity Claims",
+    "permalink": "/docs/concepts/identityClaims"
+  }
+}

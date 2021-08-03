@@ -10,8 +10,10 @@
   "permalink": "/docs/intro",
   "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/intro.md",
   "version": "current",
-  "sidebarPosition": 1,
-  "frontMatter": {
-    "sidebar_position": 1
+  "frontMatter": {},
+  "sidebar": "docs",
+  "next": {
+    "title": "Onchain Identities",
+    "permalink": "/docs/onchainIdentities"
   }
 }

@@ -1,0 +1,14 @@
+{
+  "unversionedId": "developers/identity-sdk/identity-sdk",
+  "id": "developers/identity-sdk/identity-sdk",
+  "isDocsHomePage": false,
+  "title": "Identity SDK",
+  "description": "",
+  "source": "@site/docs/developers/identity-sdk/identity-sdk.md",
+  "sourceDirName": "developers/identity-sdk",
+  "slug": "/developers/identity-sdk/identity-sdk",
+  "permalink": "/docs/developers/identity-sdk/identity-sdk",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/developers/identity-sdk/identity-sdk.md",
+  "version": "current",
+  "frontMatter": {}
+}

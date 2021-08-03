@@ -29,7 +29,7 @@
     "component": "component---theme-mdx-page-1-f-3-b90",
     "content": "content---markdown-page-393-028"
   },
-  "/docs-632": {
+  "/docs-a7d": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -37,12 +37,56 @@
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-about-license-2-d-3-6f1"
   },
+  "/docs/concepts/identityClaims-4cf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-identity-claims-3-e-8-000"
+  },
   "/docs/concepts/intro-e01": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-concepts-intro-53-f-383"
   },
+  "/docs/concepts/onchainIdentities-8bc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-onchain-identities-6-e-8-6e4"
+  },
+  "/docs/concepts/trex-6c5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-concepts-trex-1-f-1-e91"
+  },
+  "/docs/developers/api/getStarted-8de": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-developers-api-get-startededb-3b8"
+  },
+  "/docs/developers/api/intro-2fd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-developers-api-introdbe-9a1"
+  },
   "/docs/developers/intro-718": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-developers-intro-3-d-1-930"
+  },
+  "/docs/developers/sdk/constants-0d2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-developers-sdk-constantsb-2-b-82c"
+  },
+  "/docs/developers/sdk/getStarted-814": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-developers-sdk-get-started-4-de-519"
+  },
+  "/docs/developers/sdk/intro-7a8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-developers-sdk-intro-0-d-2-21f"
+  },
+  "/docs/developers/sdk/provider-0fe": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-developers-sdk-providerbf-8-428"
+  },
+  "/docs/developers/sdk/signature-d66": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-developers-sdk-signature-414-126"
+  },
+  "/docs/developers/sdk/usageDoc-10a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-developers-sdk-usage-doc-8-b-5-73f"
   }
 }

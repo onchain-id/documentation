@@ -1,0 +1,23 @@
+{
+  "unversionedId": "sdk/signature",
+  "id": "sdk/signature",
+  "isDocsHomePage": false,
+  "title": "Signing claims or messages",
+  "description": "",
+  "source": "@site/docs/sdk/signature.md",
+  "sourceDirName": "sdk",
+  "slug": "/sdk/signature",
+  "permalink": "/docs/sdk/signature",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/sdk/signature.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Blockchain provider",
+    "permalink": "/docs/sdk/provider"
+  },
+  "next": {
+    "title": "Claims constants",
+    "permalink": "/docs/sdk/constants"
+  }
+}

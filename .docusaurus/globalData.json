@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "developers/intro",
+          "mainDocId": "concepts/intro",
           "docs": [
             {
               "id": "about/license",
@@ -16,13 +16,68 @@
               "sidebar": "about"
             },
             {
+              "id": "concepts/identityClaims",
+              "path": "/docs/concepts/identityClaims",
+              "sidebar": "concepts"
+            },
+            {
               "id": "concepts/intro",
               "path": "/docs/concepts/intro",
               "sidebar": "concepts"
             },
             {
+              "id": "concepts/onchainIdentities",
+              "path": "/docs/concepts/onchainIdentities",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/trex",
+              "path": "/docs/concepts/trex",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "developers/api/getStarted",
+              "path": "/docs/developers/api/getStarted",
+              "sidebar": "developers"
+            },
+            {
+              "id": "developers/api/intro",
+              "path": "/docs/developers/api/intro",
+              "sidebar": "developers"
+            },
+            {
               "id": "developers/intro",
               "path": "/docs/developers/intro",
+              "sidebar": "developers"
+            },
+            {
+              "id": "developers/sdk/constants",
+              "path": "/docs/developers/sdk/constants",
+              "sidebar": "developers"
+            },
+            {
+              "id": "developers/sdk/getStarted",
+              "path": "/docs/developers/sdk/getStarted",
+              "sidebar": "developers"
+            },
+            {
+              "id": "developers/sdk/intro",
+              "path": "/docs/developers/sdk/intro",
+              "sidebar": "developers"
+            },
+            {
+              "id": "developers/sdk/provider",
+              "path": "/docs/developers/sdk/provider",
+              "sidebar": "developers"
+            },
+            {
+              "id": "developers/sdk/signature",
+              "path": "/docs/developers/sdk/signature",
+              "sidebar": "developers"
+            },
+            {
+              "id": "developers/sdk/usageDoc",
+              "path": "/docs/developers/sdk/usageDoc",
               "sidebar": "developers"
             }
           ]

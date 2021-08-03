@@ -1,0 +1,26 @@
+{
+  "unversionedId": "developers/sdk/provider",
+  "id": "developers/sdk/provider",
+  "isDocsHomePage": false,
+  "title": "Blockchain provider",
+  "description": "",
+  "source": "@site/docs/developers/sdk/provider.md",
+  "sourceDirName": "developers/sdk",
+  "slug": "/developers/sdk/provider",
+  "permalink": "/docs/developers/sdk/provider",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/developers/sdk/provider.md",
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "developers",
+  "previous": {
+    "title": "Usage documentation",
+    "permalink": "/docs/developers/sdk/usageDoc"
+  },
+  "next": {
+    "title": "Claims constants",
+    "permalink": "/docs/developers/sdk/constants"
+  }
+}

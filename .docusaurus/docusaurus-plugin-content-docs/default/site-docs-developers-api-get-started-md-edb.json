@@ -1,0 +1,26 @@
+{
+  "unversionedId": "developers/api/getStarted",
+  "id": "developers/api/getStarted",
+  "isDocsHomePage": false,
+  "title": "Getting started",
+  "description": "",
+  "source": "@site/docs/developers/api/getStarted.md",
+  "sourceDirName": "developers/api",
+  "slug": "/developers/api/getStarted",
+  "permalink": "/docs/developers/api/getStarted",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/developers/api/getStarted.md",
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "developers",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/developers/api/intro"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/developers/sdk/intro"
+  }
+}

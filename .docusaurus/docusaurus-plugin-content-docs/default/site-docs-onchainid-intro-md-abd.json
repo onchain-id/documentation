@@ -1,0 +1,15 @@
+{
+  "unversionedId": "onchainid/intro",
+  "id": "onchainid/intro",
+  "isDocsHomePage": false,
+  "title": "Introduction to ONCHAINID concepts",
+  "description": "",
+  "source": "@site/docs/onchainid/intro.md",
+  "sourceDirName": "onchainid",
+  "slug": "/onchainid/intro",
+  "permalink": "/docs/onchainid/intro",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/onchainid/intro.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "concepts"
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "concepts/identityClaims",
+  "id": "concepts/identityClaims",
+  "isDocsHomePage": false,
+  "title": "Identity Claims",
+  "description": "",
+  "source": "@site/docs/concepts/identityClaims.md",
+  "sourceDirName": "concepts",
+  "slug": "/concepts/identityClaims",
+  "permalink": "/docs/concepts/identityClaims",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/concepts/identityClaims.md",
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Application : T-REX tokens",
+    "permalink": "/docs/concepts/trex"
+  }
+}

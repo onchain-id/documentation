@@ -1,0 +1,23 @@
+{
+  "unversionedId": "sdk/getStarted",
+  "id": "sdk/getStarted",
+  "isDocsHomePage": false,
+  "title": "Getting started",
+  "description": "",
+  "source": "@site/docs/sdk/getStarted.md",
+  "sourceDirName": "sdk",
+  "slug": "/sdk/getStarted",
+  "permalink": "/docs/sdk/getStarted",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/sdk/getStarted.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/docs/sdk/intro"
+  },
+  "next": {
+    "title": "Blockchain provider",
+    "permalink": "/docs/sdk/provider"
+  }
+}

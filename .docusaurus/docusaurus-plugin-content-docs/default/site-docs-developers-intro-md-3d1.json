@@ -1,0 +1,22 @@
+{
+  "unversionedId": "developers/intro",
+  "id": "developers/intro",
+  "isDocsHomePage": false,
+  "title": "Developers, welcome",
+  "description": "",
+  "source": "@site/docs/developers/intro.md",
+  "sourceDirName": "developers",
+  "slug": "/developers/intro",
+  "permalink": "/docs/developers/intro",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/developers/intro.md",
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "developers",
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/developers/api/intro"
+  }
+}

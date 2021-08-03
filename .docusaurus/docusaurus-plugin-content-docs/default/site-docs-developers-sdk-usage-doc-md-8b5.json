@@ -1,0 +1,26 @@
+{
+  "unversionedId": "developers/sdk/usageDoc",
+  "id": "developers/sdk/usageDoc",
+  "isDocsHomePage": false,
+  "title": "Usage documentation",
+  "description": "",
+  "source": "@site/docs/developers/sdk/usageDoc.md",
+  "sourceDirName": "developers/sdk",
+  "slug": "/developers/sdk/usageDoc",
+  "permalink": "/docs/developers/sdk/usageDoc",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/developers/sdk/usageDoc.md",
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3
+  },
+  "sidebar": "developers",
+  "previous": {
+    "title": "Getting started",
+    "permalink": "/docs/developers/sdk/getStarted"
+  },
+  "next": {
+    "title": "Blockchain provider",
+    "permalink": "/docs/developers/sdk/provider"
+  }
+}
