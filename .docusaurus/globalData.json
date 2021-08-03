@@ -36,13 +36,18 @@
               "sidebar": "concepts"
             },
             {
-              "id": "developers/api/getStarted",
-              "path": "/docs/developers/api/getStarted",
+              "id": "developers/claim-issuers/intro",
+              "path": "/docs/developers/claim-issuers/intro",
               "sidebar": "developers"
             },
             {
-              "id": "developers/api/intro",
-              "path": "/docs/developers/api/intro",
+              "id": "developers/information-providers/intro",
+              "path": "/docs/developers/information-providers/intro",
+              "sidebar": "developers"
+            },
+            {
+              "id": "developers/integration/intro",
+              "path": "/docs/developers/integration/intro",
               "sidebar": "developers"
             },
             {

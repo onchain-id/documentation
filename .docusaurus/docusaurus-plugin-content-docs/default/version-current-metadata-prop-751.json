@@ -35,17 +35,38 @@
       },
       {
         "type": "category",
-        "label": "Identity API",
+        "label": "Integrating Identities",
         "items": [
           {
             "type": "link",
-            "label": "Introduction",
-            "href": "/docs/developers/api/intro"
-          },
+            "label": "intro",
+            "href": "/docs/developers/integration/intro"
+          }
+        ],
+        "collapsible": true,
+        "collapsed": true
+      },
+      {
+        "type": "category",
+        "label": "Claim Issuers",
+        "items": [
           {
             "type": "link",
-            "label": "Getting started",
-            "href": "/docs/developers/api/getStarted"
+            "label": "intro",
+            "href": "/docs/developers/claim-issuers/intro"
+          }
+        ],
+        "collapsible": true,
+        "collapsed": true
+      },
+      {
+        "type": "category",
+        "label": "Information Providers",
+        "items": [
+          {
+            "type": "link",
+            "label": "intro",
+            "href": "/docs/developers/information-providers/intro"
           }
         ],
         "collapsible": true,

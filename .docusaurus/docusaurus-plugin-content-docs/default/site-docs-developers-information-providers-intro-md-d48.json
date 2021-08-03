@@ -1,0 +1,23 @@
+{
+  "unversionedId": "developers/information-providers/intro",
+  "id": "developers/information-providers/intro",
+  "isDocsHomePage": false,
+  "title": "intro",
+  "description": "",
+  "source": "@site/docs/developers/information-providers/intro.md",
+  "sourceDirName": "developers/information-providers",
+  "slug": "/developers/information-providers/intro",
+  "permalink": "/docs/developers/information-providers/intro",
+  "editUrl": "https://github.com/onchain-id/documentation/edit/master/docs/docs/developers/information-providers/intro.md",
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "developers",
+  "previous": {
+    "title": "intro",
+    "permalink": "/docs/developers/claim-issuers/intro"
+  },
+  "next": {
+    "title": "Introduction",
+    "permalink": "/docs/developers/sdk/intro"
+  }
+}

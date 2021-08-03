@@ -16,7 +16,7 @@
   },
   "sidebar": "developers",
   "next": {
-    "title": "Introduction",
-    "permalink": "/docs/developers/api/intro"
+    "title": "intro",
+    "permalink": "/docs/developers/integration/intro"
   }
 }

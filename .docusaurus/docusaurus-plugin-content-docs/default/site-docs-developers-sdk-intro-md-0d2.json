@@ -16,8 +16,8 @@
   },
   "sidebar": "developers",
   "previous": {
-    "title": "Getting started",
-    "permalink": "/docs/developers/api/getStarted"
+    "title": "intro",
+    "permalink": "/docs/developers/information-providers/intro"
   },
   "next": {
     "title": "Getting started",
