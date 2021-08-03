@@ -22,7 +22,7 @@ module.exports = {
       items: [
         {
           type: 'doc',
-          docId: 'onchainid/intro',
+          docId: 'concepts/intro',
           position: 'left',
           label: 'Concepts',
         },
