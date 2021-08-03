@@ -31,7 +31,29 @@ const MANAGEMENT_KEY = '0x...management key';
 })();
 ```
 
-> 💡 To deploy identities without using proxies or implementation authorities, please use the smart contract bytecodes and ABIs provided in the `@onchain-id/solidity` package.
+> 💡 To deploy identities without using proxies or implementation authorities, please use the smart contract bytecodes and ABIs provided in the `@onchain-id/solidity` package. You'll also need a blockchain library, such as `ethers`.
+
+```typescript
+import ONCHAINID from "@onchain-id/solidity";
+import { ethers } from 'ethers';
+
+(async () => {
+	const provider = ethers.getDefaultProvider('kovan');
+	const signer = new ethers.Wallet('private key', provider);
+	
+	const identityFactory = new ethers.ContractFactory(
+		ONCHAINID.contracts.Identity.abi,
+		ONCHAINID.contracts.Identity.bytecode,
+		signer
+	);
+	const identity = await identityFactory.deploy(
+		await signer.getAddress(),
+		false,
+	);
+	// waiting for the contract to be deployed
+	await identity.deployed();
+})()
+```
 
 ### Load an Identity
 
@@ -85,3 +107,68 @@ const addKeyTransaction = await identity.addKey(IdentitySDK.utils.encodeAndHash(
 ```
 
 The `signer` must be a MANAGEMENT key on the Identity to perform the operation.
+
+
+### Get management keys of an Identity
+
+```typescript
+import { Identity, IdentitySDK } from "@onchain-id/identity-sdk";
+import { ethers } from 'ethers';
+
+(async () => {
+	const address = '0x..........' /* address of the identity you want to instanciate */ 
+	const provider = ethers.getDefaultProvider('kovan');
+
+	const identity = await Identity.at(address, provider);
+
+	const keys = await identity.getKeysByPurpose(
+		IdentitySDK.utils.enums.KeyPurpose.MANAGEMENT
+	);
+	const hashedAddress = IdentitySDK.utils.encodeAndHash(["address"], ['0x...your wallet address']);
+	for (const key of keys) {
+		if (key.key === hashedAddress) {
+			console.log("The identity has been instantiates we verified the wallet used is a manager of the identity");
+		}
+	}
+})()
+```
+
+## Claims
+
+### Add a claim to an identity
+
+Remember that to add a claim to an identity, the signer of the transaction must have a CLAIM or MANAGEMENT key over the identity.
+
+```typescript
+import { Identity, IdentitySDK } from "@onchain-id/identity-sdk";
+import { ethers } from 'ethers';
+
+(async () => {
+	const address = '0x..........' /* address of the identity you want to instanciate */
+    const provider = ethers.getDefaultProvider('kovan');
+    const signer = new ethers.Wallet('private key', provider);
+
+	const identity = await Identity.at(address, signer);
+
+	// prepare the claim
+	const claim = new IdentitySDK.Claim({
+		address: '/* identity address */',
+		data: '/* data of the claim */',
+		issuer: '/* issuer address */',
+		emissionDate: Date.now(),
+		scheme: '/* scheme of the claim */',
+		topic: '/* topic of the claim */',
+	});
+
+	// sign the claim
+	const customSigner = new IdentitySDK.SignerModule({
+		publicKey: await signer.getAddress(),
+		signMessage: signer.signMessage.bind(this.signer)
+	});
+	await claim.sign(customSigner);
+
+	// emit the claim
+	const tx = await identity.addClaim(claim.topic, claim.scheme, claim.issuer, claim.signature, claim.data, claim.uri, { signer });
+	await tx.wait();
+})();
+```
