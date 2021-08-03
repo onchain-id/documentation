@@ -10,3 +10,4 @@ node_modules/
 
 # BUILD
 build/
+.docusaurus/
