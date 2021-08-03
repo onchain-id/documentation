@@ -172,3 +172,23 @@ import { ethers } from 'ethers';
 	await tx.wait();
 })();
 ```
+
+### Get claims of an Identity
+
+This method returns only claims that are stored on the ONCHAINID contract. Claims returned might not be valid anymore,
+so you may need to verify their validity against the Claim Issuer that issued these claims
+(usually by calling `.isClaimValid()` on the Claim Issuer contract).
+
+```javascript
+const { IdentitySDK } = require('@onchain-id/identity-sdk');
+
+const provider = ethers.getDefaultProvider('kovan');
+
+(async () => {
+    const identity = new IdentitySDK.Identity('0xadD92F8Ef0729E969c5a98Ea5740c9b644B362e3', provider);
+    
+    const claims = await identity.getClaimsByTopic(109741294);
+    
+    console.log(claims);
+})();
+```
