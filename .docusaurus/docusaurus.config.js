@@ -24,11 +24,6 @@ export default {
           "activeSidebarClassName": "navbar__link--active"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
-        },
-        {
           "href": "https://github.com/onchaind-id/documentation",
           "label": "GitHub",
           "position": "right"
