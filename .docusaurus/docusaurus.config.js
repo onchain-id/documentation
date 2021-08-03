@@ -18,7 +18,7 @@ export default {
       "items": [
         {
           "type": "doc",
-          "docId": "onchainid/intro",
+          "docId": "concepts/intro",
           "position": "left",
           "label": "Concepts",
           "activeSidebarClassName": "navbar__link--active"
@@ -31,7 +31,7 @@ export default {
           "activeSidebarClassName": "navbar__link--active"
         },
         {
-          "href": "https://github.com/onchaind-id/documentation",
+          "href": "https://github.com/onchain-id/documentation",
           "label": "GitHub",
           "position": "right"
         }

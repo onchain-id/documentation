@@ -50,19 +50,19 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','1c6'),
+    component: ComponentCreator('/docs','05c'),
     routes: [
+      {
+        path: '/docs/concepts/intro',
+        component: ComponentCreator('/docs/concepts/intro','e01'),
+        exact: true,
+        'sidebar': "concepts"
+      },
       {
         path: '/docs/developers/intro',
         component: ComponentCreator('/docs/developers/intro','718'),
         exact: true,
         'sidebar': "developers"
-      },
-      {
-        path: '/docs/onchainid/intro',
-        component: ComponentCreator('/docs/onchainid/intro','9e0'),
-        exact: true,
-        'sidebar': "concepts"
       }
     ]
   },

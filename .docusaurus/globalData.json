@@ -11,14 +11,14 @@
           "mainDocId": "developers/intro",
           "docs": [
             {
+              "id": "concepts/intro",
+              "path": "/docs/concepts/intro",
+              "sidebar": "concepts"
+            },
+            {
               "id": "developers/intro",
               "path": "/docs/developers/intro",
               "sidebar": "developers"
-            },
-            {
-              "id": "onchainid/intro",
-              "path": "/docs/onchainid/intro",
-              "sidebar": "concepts"
             }
           ]
         }

@@ -33,7 +33,7 @@ module.exports = {
           label: 'Developers',
         },
         {
-          href: 'https://github.com/onchaind-id/documentation',
+          href: 'https://github.com/onchain-id/documentation',
           label: 'GitHub',
           position: 'right',
         },
