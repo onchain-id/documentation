@@ -5,5 +5,8 @@
 .idea/
 .vscode/
 
+# Librairies
+node_modules/
+
 # BUILD
-site/
+build/
