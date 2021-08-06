@@ -41,3 +41,7 @@ More and more, we interact with computer programs contained in everyday objects.
 
 As an example, you could park your car in a parisian street, and automatically it would be detected by the sensor of a meter that will request information to the car in order to know its owner and charge its account with the parking fees. If the car has an ONCHAINID, its owner account would be a Claim (proof), certified by the national car registry. The meter could also verify at the same time that the car got the Crit’air ecologic pass by checking this other claim. 
 
+## Other use cases 
+
+Obviously, the list of use cases given above is not an exhaustive list of everything that can be done with ONCHAINID, as the identity standard can basically be used for any application requiring to identify people or things, nonetheless the list of use cases given in this documentation is already wide enough to understand the disruptive potential of ONCHAINID.
+
