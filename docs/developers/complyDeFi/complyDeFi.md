@@ -91,30 +91,30 @@ event FactorySet(address _factory);
 # ComplyDeFi Functions
 ## setFactory
 This function is a setter for the ONCHAINID Factory address.
-It can be used post-deployment to update the ONCHAINID Factory address if required. </br>
-**OnlyOwner function : the owner wallet is the only one able to call this function** </br>
-param1 : `_factory` the address of the ONCHAINID factory </br>
+It can be used post-deployment to update the ONCHAINID Factory address if required. 
+**OnlyOwner function : the owner wallet is the only one able to call this function** 
+param1 : `_factory` the address of the ONCHAINID factory 
 emits a `FactorySet` event
 ```solidity
 function setFactory(address _factory) external;
 ```
 
 ## isTrustedIssuer
-getter function for the trusted status of a claim issuer </br>
-returns true if the address corresponds to a trusted issuer and false if not </br>
-**public function : can be called by anyone** </br>
-param1 : `_issuer` the address of the ONCHAINID contract of the claim issuer </br>
+getter function for the trusted status of a claim issuer 
+returns true if the address corresponds to a trusted issuer and false if not 
+**public function : can be called by anyone** 
+param1 : `_issuer` the address of the ONCHAINID contract of the claim issuer 
 it is important to note that the `_issuer` address here is not a wallet address but an ONCHAINID
 ```solidity
 function isTrustedIssuer(address _issuer) external view returns (bool);
 ```
 ## addTrustedIssuer
 function used to add a new trusted issuer for the contract. Adds a trusted issuer and the corresponding claims they 
-are trusted for. This function can be called only to register a new claim issuer, to update an existing issuer, please use the `updateIssuerTopics` function. </br>
-**onlyOwner function : the owner wallet is the only one able to call this function** </br>
-param1 : `_issuer` the address of the ONCHAINID contract of the claim issuer </br>
-param2 : `_claimTopics` the array of claim topics for which the issuer is trusted </br>
-it is important to note that the `_issuer` address here is not a wallet address but an ONCHAINID </br>
+are trusted for. This function can be called only to register a new claim issuer, to update an existing issuer, please use the `updateIssuerTopics` function. 
+**onlyOwner function : the owner wallet is the only one able to call this function** 
+param1 : `_issuer` the address of the ONCHAINID contract of the claim issuer 
+param2 : `_claimTopics` the array of claim topics for which the issuer is trusted 
+it is important to note that the `_issuer` address here is not a wallet address but an ONCHAINID 
 emits a `TrustedIssuerAdded` event
 
 ```solidity
@@ -123,10 +123,10 @@ function addTrustedIssuer(address _issuer, uint[] memory _claimTopics) external;
 
 ## removeTrustedIssuer
 This function is used to remove the trusted status from a claim issuer. Can be called only to remove an existing 
-claim issuer, function call will fail if the claim issuer does not exist. </br>
-**onlyOwner function : the owner wallet is the only one able to call this function** </br>
-param1 : `_issuer` the address of the ONCHAINID contract of the claim issuer </br>
-it is important to note that the `_issuer` address here is not a wallet address but an ONCHAINID </br>
+claim issuer, function call will fail if the claim issuer does not exist. 
+**onlyOwner function : the owner wallet is the only one able to call this function** 
+param1 : `_issuer` the address of the ONCHAINID contract of the claim issuer 
+it is important to note that the `_issuer` address here is not a wallet address but an ONCHAINID 
 emits a `TrustedIssuerRemoved` event
 ```solidity
 function removeTrustedIssuer(address _issuer) external;
@@ -134,13 +134,13 @@ function removeTrustedIssuer(address _issuer) external;
 
 ## updateIssuerTopics
 This function is used to update the claim set that a claim issuer is trusted for. Can be called only on an existing 
-claim issuer, function call will fail if the issuer does not exist. </br>
+claim issuer, function call will fail if the issuer does not exist. 
 The set of claim topics cannot be empty, otherwise the issuer is not considered as trusted anymore, in this case use 
-the function `removeTrustedIssuer` instead. </br>
-**onlyOwner function : the owner wallet is the only one able to call this function** </br>
-param1 : `_issuer` the address of the ONCHAINID contract of the claim issuer </br>
-param2 : `_claimTopics` the array of claim topics for which the issuer is trusted </br>
-it is important to note that the `_issuer` address here is not a wallet address but an ONCHAINID </br>
+the function `removeTrustedIssuer` instead. 
+**onlyOwner function : the owner wallet is the only one able to call this function** 
+param1 : `_issuer` the address of the ONCHAINID contract of the claim issuer 
+param2 : `_claimTopics` the array of claim topics for which the issuer is trusted 
+it is important to note that the `_issuer` address here is not a wallet address but an ONCHAINID 
 emits a `TrustedIssuerUpdated` event
 
 ```solidity
@@ -148,9 +148,9 @@ function updateIssuerTopics(address _issuer, uint[] memory _claimTopics) externa
 ```
 
 ## isClaimRequired
-View function used to check if a claim is required or not to be eligible on the contract. </br>
-Returns true if the claim is required and false otherwise </br>
-**public function : can be called by anyone** </br>
+View function used to check if a claim is required or not to be eligible on the contract. 
+Returns true if the claim is required and false otherwise 
+**public function : can be called by anyone** 
 param1 :  `_claim` the claim topic that is currently checked
 ```solidity
 function isClaimRequired(uint _claim) external view returns (bool);
@@ -158,9 +158,9 @@ function isClaimRequired(uint _claim) external view returns (bool);
 
 ## addRequiredClaim
 This function is used to add a claim topic to the list of claim topics that are required to be considered eligible 
-by the contract. </br>
-**onlyOwner function : the owner wallet is the only one able to call this function** </br>
-param1 : `_claim` the claim topic that has to be added </br>
+by the contract. 
+**onlyOwner function : the owner wallet is the only one able to call this function** 
+param1 : `_claim` the claim topic that has to be added 
 emits a `ClaimRequired` event
 ```solidity
 function addRequiredClaim(uint _claim) external;
@@ -168,30 +168,30 @@ function addRequiredClaim(uint _claim) external;
 
 ## removeRequiredClaim
 This function is used to remove a claim topic to the list of claim topics that are required to be considered 
-eligible by the contract. </br>
-**onlyOwner function : the owner wallet is the only one able to call this function** </br>
-param1 :  `_claim` the claim topic that has to be removed </br>
+eligible by the contract. 
+**onlyOwner function : the owner wallet is the only one able to call this function** 
+param1 :  `_claim` the claim topic that has to be removed 
 emits a `ClaimUnRequired` event
 ```solidity
 function removeRequiredClaim(uint _claim) external;
 ```
 
 ## hasClaimTopic
-This function is used to check if an issuer is trusted for a specific claim topic </br>
-**public function : can be called by anyone** </br>
-param1 : `_issuer` the claim issuer contract </br>
-param2 : `_claimTopic` the claim topic that is checked </br>
-returns true if the issuer has this claim and false otherwise </br>
+This function is used to check if an issuer is trusted for a specific claim topic 
+**public function : can be called by anyone** 
+param1 : `_issuer` the claim issuer contract 
+param2 : `_claimTopic` the claim topic that is checked 
+returns true if the issuer has this claim and false otherwise 
 it is important to note that the `_issuer` address here is not a wallet address but an ONCHAINID
 ```solidity
 function hasClaimTopic(address _issuer, uint _claimTopic) external view returns (bool);
 ```
 
 ## isComply
-This function is used to check if a wallet is eligible following the requirements of the contract </br>
-**public function : can be called by anyone** </br>
-param1 : `_user` the wallet address of the user </br>
-returns true if the wallet is eligible and false otherwise </br>
+This function is used to check if a wallet is eligible following the requirements of the contract 
+**public function : can be called by anyone** 
+param1 : `_user` the wallet address of the user 
+returns true if the wallet is eligible and false otherwise 
 This function is the central function of ComplyDeFi, it is checking if the wallet is linked to an eligible ONCHAINID contract and if this ONCHAINID contains the required claim topics emitted by the issuers that are trusted for the topics
 ```solidity
 function isComply(address _user) external view returns (bool);
