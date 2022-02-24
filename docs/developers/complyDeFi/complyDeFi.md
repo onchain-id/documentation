@@ -4,8 +4,14 @@ title: ComplyDeFi
 ---
 
 # Introduction
-The goal of ComplyDeFi is to provide a simple contract to transform a permissionless DeFi protocol into a
+The goal of [ComplyDeFi](https://github.com/onchain-id/ComplyDefi) is to provide a simple contract to transform a permissionless DeFi protocol into a
 permissioned DeFi protocol. To do so, ComplyDeFi is leveraging the power of the ONCHAINID protocol, an open source & decentralized system providing identity smart contracts based on the implementation of ERC734 and ERC735. ComplyDeFi provides a very simple modifier that has to be added on the functions that require permissioning to ensure the caller of this function is eligible following the rules that the owner of the DeFi contract required.
+
+# Code
+ComplyDeFi is an open source set of smart contracts, it is available for anyone to use or modify, you can also 
+contribute to the evolution of the protocol by adding comments or Pull Requests directly on the github repository 
+available here:  
+https://github.com/onchain-id/ComplyDefi
 
 # How does it work?
 ComplyDeFi uses several concepts to work properly, these concepts are defined hereunder :
