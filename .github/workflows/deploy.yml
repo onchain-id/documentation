@@ -62,7 +62,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-            public
+            build
             .cache
           key: ${{ runner.os }}-docusaurus-build-${{ hashFiles('public') }}
           restore-keys: |
@@ -76,7 +76,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./public
+          path: ./build
 
   # Deployment job
   deploy:
