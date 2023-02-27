@@ -3,6 +3,13 @@ sidebar_position: 2
 title: Interfaces & requirements
 ---
 
+import { BlockchainContextProvider } from '@site/src/components/BlockchainContext';
+import ReadContract from '@site/src/components/ReadContract';
+
+export default function Layout({children}) {
+  return <BlockchainContextProvider>{children}</BlockchainContextProvider>;
+}
+
 # Interfaces & requirements
 
 ## Events
@@ -140,6 +147,9 @@ interface GetKey {
 }
 ```
 
+<ReadContract abi="function getKey(bytes32 _key) view returns (uint256[] memory purposes, uint256 keyType, bytes32 key)">
+</ReadContract>
+
 ### `getKeyPurposes(bytes32 _key)`
 
 Given a key identifier (32 bytes, it could be the hash of the public key), returns all purposes associated with it.
@@ -153,6 +163,9 @@ interface getKeyPurposes {
 }
 ```
 
+<ReadContract abi="function getKeyPurposes(bytes32 _key) view returns (uint256[] memory _purposes)">
+</ReadContract>
+
 ### `getKeysByPurpose(uint256 _purpose)`
 
 Given a purpose, returns all keys associated with it.
@@ -165,6 +178,9 @@ interface getKeysByPurpose {
     function getKeysByPurpose(uint256 _purpose) external view returns (bytes32[] memory keys);
 }
 ```
+
+<ReadContract abi="function getKeysByPurpose(uint256 _purpose) view returns (bytes32[] memory keys)">
+</ReadContract>
 
 ### `keyHasPurpose(bytes32 _key, uint256 _purpose)`
 
@@ -182,6 +198,9 @@ interface keyHasPurpose {
 }
 ```
 
+<ReadContract abi="function keyHasPurpose(bytes32 _key, uint256 _purpose) view returns (bool exists)">
+</ReadContract>
+
 ### `getClaimIdsByTopic(uint256 _topic)`
 
 Return the ID of all claims currently stored on the identity for a specific topic.
@@ -189,15 +208,17 @@ Return the ID of all claims currently stored on the identity for a specific topi
 > The content of the claim can be fetched with the [`getClaim`](#getclaimbytes32-claimid) method.
 
 ```solidity
-
-```solidity
 interface getClaimIdsByTopic {
-/**
- * @dev Returns an array of claim IDs by topic.
+    /**
+    * @dev Returns an array of claim IDs by topic.
      */
-function getClaimIdsByTopic(uint256 _topic) external view returns (bytes32[] memory claimIds);
+    function getClaimIdsByTopic(uint256 _topic) external view returns (bytes32[] memory claimIds);
 }
 ```
+
+
+<ReadContract abi="function getClaimIdsByTopic(uint256 _topic) view returns (bytes32[] memory claimIds)">
+</ReadContract>
 
 ### `getClaim(bytes32 _claimId)`
 
@@ -221,6 +242,9 @@ interface getClaim {
         string memory uri);
 }
 ```
+
+<ReadContract abi="function getClaim(bytes32 _claimId) view returns (uint256 topic, uint256 scheme, address issuer, bytes memory signature, bytes memory data, string memory uri)">
+</ReadContract>
 
 ### `addKey(bytes32 _key, uint256 _purpose, uint256 _type)`
 
@@ -366,7 +390,7 @@ Removes a claim from the identity using its ID. This must emit a `ClaimRemoved` 
 
 Removing a claim prevents other contracts from verifying it.
 
-```
+```solidity
 interface removeClaim {
     /**
      * @dev Removes a claim.
