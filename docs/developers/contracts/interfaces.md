@@ -1,14 +1,379 @@
 ---
 sidebar_position: 2
-title: Interfaces
+title: Interfaces & requirements
 ---
 
-# Interfaces
+# Interfaces & requirements
 
-Specification of the contracts
+## Events
 
-```mermaid
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
+### ExecutionRequested
+
+Emitted whenever an execution request was performed via `execute`. If the request is immediately approved and executed,
+this event would be followed in the same transaction and the same `executionId` by `Approved` and `Executed` (
+or `ExecutionFailed`). Otherwise, the request is on hold until an authorized key calls `approve()` with the
+same `executionId`.
+
+```solidity
+interface ExecutionRequested {
+    /**
+     * @dev Emitted when an execution request was performed via `execute`.
+     *
+     * Specification: MUST be triggered when execute was successfully called.
+     */
+    event ExecutionRequested(uint256 indexed executionId, address indexed to, uint256 indexed value, bytes data);
+}
+```
+
+> :::caution
+>
+> A user-interface could listen to `ExecutionRequested` events and invite the user to review them and maybe approve
+> them. The interface must then also listen to `Executed`, `ExecutionFailed` and `Approve` to update this list
+> according to these events.
+>
+> However, the contract could be spammed with malicious requests, attempting to trick the user to accept them and
+> interact with other contracts, transfer value, or modify the authorized key on the contract. Such decentralized
+> application should be very cautious how they implement the management of execution requests.
+>
+> Requests that interact with the identity contract itself should be marked as dangerous.
+>
+> Requests that contains well-known interaction (e.g. transfer/transferFrom/approve/etc methods) should be decoded and
+> displayed in human-readable format. Requests that contains unknown interaction should be marked as dangerous.
+>
+> Requests comings from unknown addresses (that never had an approved execution before) should be marked as dangerous,
+> and should be displayed appart from the other requests (for instance, in a separate tab).
+>
+> :::
+
+### Approved
+
+Emitted when an execution request received an approval response (either positive or negative).
+
+```solidity
+interface Approved {
+    /**
+     * @dev Emitted when an execution request was approved.
+     *
+     * Specification: MUST be triggered when approve was successfully called.
+     */
+    event Approved(uint256 indexed executionId, bool approved);
+}
+```
+
+### Executed
+
+Emitted when an execution request was executed successfully. Either after an immediate execution, or after receiving a
+positive approval. In case the execution failed, because you are transferring value the identity contract doesn't have
+or because the execution contains a call to an external contract that failed, then the event is not emitted
+(but `ExecutionFailed` would be emitted instead).
+
+```solidity
+interface Executed {
+    /**
+     * @dev Emitted when an execute operation was approved and successfully performed.
+     *
+     * Specification: MUST be triggered when approve was called and the execution was successfully approved.
+     */
+    event Executed(uint256 indexed executionId, address indexed to, uint256 indexed value, bytes data);
+}
+```
+
+### ExecutionFailed
+
+Emitted when an execution request failed. Usually, failures are due to attempting to transfer value that the identity
+contract doesn't possess, or because the execution contains a call to an external contract that failed.
+
+```solidity
+interface ExecutionFailed {
+    /**
+     * @dev Emitted when an execute operation was called and failed
+     *
+     * Specification: MUST be triggered when execute call failed
+     */
+    event ExecutionFailed(uint256 indexed executionId, address indexed to, uint256 indexed value, bytes data);
+}
+```
+
+### KeyAdded
+
+Emitted when a new key was added to the identity for a given purpose.
+
+```solidity
+interface KeyAdded {
+    /**
+     * @dev Emitted when a key was added to the Identity.
+     *
+     * Specification: MUST be triggered when addKey was successfully called.
+     */
+    event KeyAdded(bytes32 indexed key, uint256 indexed purpose, uint256 indexed keyType);
+}
+```
+
+### KeyRemoved
+
+Emitted when a purpose was removed from a key on the identity.
+
+```solidity
+interface KeyRemoved {
+    /**
+     * @dev Emitted when a key was removed from the Identity.
+     *
+     * Specification: MUST be triggered when removeKey was successfully called.
+     */
+    event KeyRemoved(bytes32 indexed key, uint256 indexed purpose, uint256 indexed keyType);
+}
+```
+
+## Methods
+
+### `getKey(bytes32 _key)`
+
+Given a key identifier (32 bytes, it could be the hash of the public key), returns the details associated with (
+registered type and purposes).
+
+```solidity
+interface GetKey {
+    /**
+     * @dev Returns the full key data, if present in the identity.
+     */
+    function getKey(bytes32 _key) external view returns (uint256[] memory purposes, uint256 keyType, bytes32 key);
+}
+```
+
+### `getKeyPurposes(bytes32 _key)`
+
+Given a key identifier (32 bytes, it could be the hash of the public key), returns all purposes associated with it.
+
+```solidity
+interface getKeyPurposes {
+    /**
+     * @dev Returns the list of purposes associated with a key.
+     */
+    function getKeyPurposes(bytes32 _key) external view returns (uint256[] memory _purposes);
+}
+```
+
+### `getKeysByPurpose(uint256 _purpose)`
+
+Given a purpose, returns all keys associated with it.
+
+```solidity
+interface getKeysByPurpose {
+    /**
+     * @dev Returns an array of public key bytes32 held by this identity.
+     */
+    function getKeysByPurpose(uint256 _purpose) external view returns (bytes32[] memory keys);
+}
+```
+
+### `keyHasPurpose(bytes32 _key, uint256 _purpose)`
+
+Returns true if a key identifier is registered with a specific purpose on the identity OR if the key is a MANAGEMENT
+key.
+
+This is the recommended method to check permissions of a key.
+
+```solidity
+interface keyHasPurpose {
+    /**
+     * @dev Returns TRUE if a key is present and has the given purpose. If the key is not present it returns FALSE.
+     */
+    function keyHasPurpose(bytes32 _key, uint256 _purpose) external view returns (bool exists);
+}
+```
+
+### `getClaimIdsByTopic(uint256 _topic)`
+
+Return the ID of all claims currently stored on the identity for a specific topic.
+
+> The content of the claim can be fetched with the [`getClaim`](#getclaimbytes32-claimid) method.
+
+```solidity
+
+```solidity
+interface getClaimIdsByTopic {
+/**
+ * @dev Returns an array of claim IDs by topic.
+     */
+function getClaimIdsByTopic(uint256 _topic) external view returns (bytes32[] memory claimIds);
+}
+```
+
+### `getClaim(bytes32 _claimId)`
+
+Return the on-chain stored content and metadata of a claim that exists on the identity (returns empty values if the
+claim is not stored on this contract).
+
+```solidity
+interface getClaim {
+    /**
+     * @dev Get a claim by its ID.
+     *
+     * Claim IDs are generated using `keccak256(abi.encode(address issuer_address, uint256 topic))`.
+     */
+    function getClaim(bytes32 _claimId)
+    external view returns (
+        uint256 topic,
+        uint256 scheme,
+        address issuer,
+        bytes memory signature,
+        bytes memory data,
+        string memory uri);
+}
+```
+
+### `addKey(bytes32 _key, uint256 _purpose, uint256 _type)`
+
+Add a purpose to a key on the identity (adding the key if it doesn't exist yet). This reverts if the key already has the
+specified purpose.
+
+```solidity
+interface addKey {
+    /**
+     * @dev Adds a _key to the identity. The _purpose specifies the purpose of the key.
+     *
+     * Triggers Event: `KeyAdded`
+     *
+     * Specification: MUST only be done by keys of purpose 1, or the identity
+     * itself. If it's the identity itself, the approval process will determine its approval.
+     */
+    function addKey(bytes32 _key, uint256 _purpose, uint256 _keyType) external returns (bool success);
+}
+```
+
+### `removeKey(bytes32 _key, uint256 _purpose)`
+
+Remove a purpose from a key on the identity. This reverts if the key doesn't have the specified purpose.
+
+```solidity
+interface removeKey {
+    /**
+     * @dev Removes _purpose for _key from the identity.
+     *
+     * Triggers Event: `KeyRemoved`
+     *
+     * Specification: MUST only be done by keys of purpose 1, or the identity itself.
+     * If it's the identity itself, the approval process will determine its approval.
+     */
+    function removeKey(bytes32 _key, uint256 _purpose) external returns (bool success);
+}
+```
+
+### `execute(address _to, uint256 _value, bytes memory _data)`
+
+Create a new execution request. This will emit an `ExecutionRequested` event. If the calling key is not authorized to
+apply the execution, then the execution request would be put on hold until approval from an authorized key. Otherwise,
+the execution is immediately triggered and this event would be followed in the same transaction and the
+same `executionId` by `Approved` and `Executed` (or `ExecutionFailed`).
+
+The execution can target:
+
+- The identity contract itself, by encoding the function call in the _data parameter (value should then be 0).
+- Another address to send value (then value should be positive and _data empty).
+- Another contract to call a method, encoding the function call in _data (then value may be positive if value should be
+  sent alongside the call).
+
+```solidity
+interface execute {
+    /**
+     * @dev Passes an execution instruction to an ERC734 identity.
+     * How the execution is handled is up to the identity implementation:
+     * An execution COULD be requested and require `approve` to be called with one or more keys of purpose 1 or 2 to
+     * approve this execution.
+     * Execute COULD be used as the only accessor for `addKey` and `removeKey`.
+     *
+     * Triggers Event: ExecutionRequested
+     * Triggers on direct execution Event: Executed
+     */
+    function execute(address _to, uint256 _value, bytes calldata _data) external payable returns (uint256 executionId);
+}
+```
+
+> :::tip
+>
+> When transfering value, the sender can either send value when calling `execute`, or send 0 to use currency stored on
+> the identity.
+>
+> :::
+
+> :::tip
+>
+> Using execute, you can transfer tokens that were sent to the identity contract. Note that the identity doesn't
+> implement the `ERC1155Holder` trait and thus cannot receive tokens from a `safeTransferTokens`!
+>
+> :::
+
+### `approve(uint256 _id, bool _approve)`
+
+Approve or reject an execution request. This will emit an `Approved` event. If the execution request is approved, then
+it would be executed and the transaction would include `Executed` or `ExecutionFailed` events. If the execution fails,
+then the approval would still be taken into account and the execution cannot be replayed. A new call to `execute` must
+be performed. Usually, failures are due to attempting to transfer value that the identity
+contract doesn't possess, or because the execution contains a call to an external contract that failed.
+
+```solidity
+interface approve {
+    /**
+    * @dev Approves an execution.
+    *
+    * Triggers Event: `Approved`
+    * Triggers on execution successful Event: `Executed`
+    * Triggers on execution failure Event: `ExecutionFailed`
+    */
+    function approve(uint256 _id, bool _approve) external returns (bool success);
+}
+```
+
+### `addClaim(uint256 _topic, uint256 _scheme, address _issuer, bytes memory _signature, bytes memory _data, string memory _uri)`
+
+Add a claim to the identity. This must emit a `ClaimAdded` event.
+
+> :::danger
+>
+> Claim data may contain sensitive information that would be stored on-chain. A properly designed claim should not
+> contain information in clear text, but only hash of information associated with a random salt or content (like an
+> UUID). Do not store sensitive information in clear text on-chain.
+>
+> :::
+
+```solidity
+interface addClaim {
+    /**
+     * @dev Add or update a claim.
+     *
+     * Triggers Event: `ClaimAdded`, `ClaimChanged`
+     *
+     * Specification: Add or update a claim from an issuer.
+     *
+     * _signature is a signed message of the following structure:
+     * `keccak256(abi.encode(address identityHolder_address, uint256 topic, bytes data))`.
+     * Claim IDs are generated using `keccak256(abi.encode(address issuer_address + uint256 topic))`.
+     */
+    function addClaim(
+        uint256 _topic,
+        uint256 _scheme,
+        address issuer,
+        bytes calldata _signature,
+        bytes calldata _data,
+        string calldata _uri)
+    external returns (bytes32 claimRequestId);
+}
+```
+
+### `removeClaim(bytes32 _claimId)`
+
+Removes a claim from the identity using its ID. This must emit a `ClaimRemoved` event.
+
+Removing a claim prevents other contracts from verifying it.
+
+```
+interface removeClaim {
+    /**
+     * @dev Removes a claim.
+     *
+     * Triggers Event: `ClaimRemoved`
+     *
+     * Claim IDs are generated using `keccak256(abi.encode(address issuer_address, uint256 topic))`.
+     */
+    function removeClaim(bytes32 _claimId) external returns (bool success);
 ```
