@@ -12,9 +12,11 @@ export default function Layout({children}) {
 
 # Interfaces & requirements
 
-## Events
+## Identity
 
-### ExecutionRequested
+### Events
+
+#### ExecutionRequested
 
 Emitted whenever an execution request was performed via `execute`. If the request is immediately approved and executed,
 this event would be followed in the same transaction and the same `executionId` by `Approved` and `Executed` (
@@ -52,7 +54,7 @@ interface ExecutionRequested {
 >
 > :::
 
-### Approved
+#### Approved
 
 Emitted when an execution request received an approval response (either positive or negative).
 
@@ -67,7 +69,7 @@ interface Approved {
 }
 ```
 
-### Executed
+#### Executed
 
 Emitted when an execution request was executed successfully. Either after an immediate execution, or after receiving a
 positive approval. In case the execution failed, because you are transferring value the identity contract doesn't have
@@ -85,7 +87,7 @@ interface Executed {
 }
 ```
 
-### ExecutionFailed
+#### ExecutionFailed
 
 Emitted when an execution request failed. Usually, failures are due to attempting to transfer value that the identity
 contract doesn't possess, or because the execution contains a call to an external contract that failed.
@@ -101,7 +103,7 @@ interface ExecutionFailed {
 }
 ```
 
-### KeyAdded
+#### KeyAdded
 
 Emitted when a new key was added to the identity for a given purpose.
 
@@ -116,7 +118,7 @@ interface KeyAdded {
 }
 ```
 
-### KeyRemoved
+#### KeyRemoved
 
 Emitted when a purpose was removed from a key on the identity.
 
@@ -131,9 +133,9 @@ interface KeyRemoved {
 }
 ```
 
-## Methods
+### Methods
 
-### `getKey(bytes32 _key)`
+#### `getKey(bytes32 _key)`
 
 Given a key identifier (32 bytes, it could be the hash of the public key), returns the details associated with (
 registered type and purposes).
@@ -150,7 +152,7 @@ interface GetKey {
 <ReadContract abi="function getKey(bytes32 _key) view returns (uint256[] memory purposes, uint256 keyType, bytes32 key)">
 </ReadContract>
 
-### `getKeyPurposes(bytes32 _key)`
+#### `getKeyPurposes(bytes32 _key)`
 
 Given a key identifier (32 bytes, it could be the hash of the public key), returns all purposes associated with it.
 
@@ -166,7 +168,7 @@ interface getKeyPurposes {
 <ReadContract abi="function getKeyPurposes(bytes32 _key) view returns (uint256[] memory _purposes)">
 </ReadContract>
 
-### `getKeysByPurpose(uint256 _purpose)`
+#### `getKeysByPurpose(uint256 _purpose)`
 
 Given a purpose, returns all keys associated with it.
 
@@ -182,7 +184,7 @@ interface getKeysByPurpose {
 <ReadContract abi="function getKeysByPurpose(uint256 _purpose) view returns (bytes32[] memory keys)">
 </ReadContract>
 
-### `keyHasPurpose(bytes32 _key, uint256 _purpose)`
+#### `keyHasPurpose(bytes32 _key, uint256 _purpose)`
 
 Returns true if a key identifier is registered with a specific purpose on the identity OR if the key is a MANAGEMENT
 key.
@@ -201,7 +203,7 @@ interface keyHasPurpose {
 <ReadContract abi="function keyHasPurpose(bytes32 _key, uint256 _purpose) view returns (bool exists)">
 </ReadContract>
 
-### `getClaimIdsByTopic(uint256 _topic)`
+#### `getClaimIdsByTopic(uint256 _topic)`
 
 Return the ID of all claims currently stored on the identity for a specific topic.
 
@@ -220,7 +222,7 @@ interface getClaimIdsByTopic {
 <ReadContract abi="function getClaimIdsByTopic(uint256 _topic) view returns (bytes32[] memory claimIds)">
 </ReadContract>
 
-### `getClaim(bytes32 _claimId)`
+#### `getClaim(bytes32 _claimId)`
 
 Return the on-chain stored content and metadata of a claim that exists on the identity (returns empty values if the
 claim is not stored on this contract).
@@ -246,7 +248,7 @@ interface getClaim {
 <ReadContract abi="function getClaim(bytes32 _claimId) view returns (uint256 topic, uint256 scheme, address issuer, bytes memory signature, bytes memory data, string memory uri)">
 </ReadContract>
 
-### `addKey(bytes32 _key, uint256 _purpose, uint256 _type)`
+#### `addKey(bytes32 _key, uint256 _purpose, uint256 _type)`
 
 Add a purpose to a key on the identity (adding the key if it doesn't exist yet). This reverts if the key already has the
 specified purpose.
@@ -265,7 +267,7 @@ interface addKey {
 }
 ```
 
-### `removeKey(bytes32 _key, uint256 _purpose)`
+#### `removeKey(bytes32 _key, uint256 _purpose)`
 
 Remove a purpose from a key on the identity. This reverts if the key doesn't have the specified purpose.
 
@@ -283,7 +285,7 @@ interface removeKey {
 }
 ```
 
-### `execute(address _to, uint256 _value, bytes memory _data)`
+#### `execute(address _to, uint256 _value, bytes memory _data)`
 
 Create a new execution request. This will emit an `ExecutionRequested` event. If the calling key is not authorized to
 apply the execution, then the execution request would be put on hold until approval from an authorized key. Otherwise,
@@ -327,7 +329,7 @@ interface execute {
 >
 > :::
 
-### `approve(uint256 _id, bool _approve)`
+#### `approve(uint256 _id, bool _approve)`
 
 Approve or reject an execution request. This will emit an `Approved` event. If the execution request is approved, then
 it would be executed and the transaction would include `Executed` or `ExecutionFailed` events. If the execution fails,
@@ -348,7 +350,7 @@ interface approve {
 }
 ```
 
-### `addClaim(uint256 _topic, uint256 _scheme, address _issuer, bytes memory _signature, bytes memory _data, string memory _uri)`
+#### `addClaim(uint256 _topic, uint256 _scheme, address _issuer, bytes memory _signature, bytes memory _data, string memory _uri)`
 
 Add a claim to the identity. This must emit a `ClaimAdded` event.
 
@@ -384,7 +386,7 @@ interface addClaim {
 }
 ```
 
-### `removeClaim(bytes32 _claimId)`
+#### `removeClaim(bytes32 _claimId)`
 
 Removes a claim from the identity using its ID. This must emit a `ClaimRemoved` event.
 
@@ -400,5 +402,40 @@ interface removeClaim {
      * Claim IDs are generated using `keccak256(abi.encode(address issuer_address, uint256 topic))`.
      */
     function removeClaim(bytes32 _claimId) external returns (bool success);
+}
+```
+
+
+## Claim issuer
+
+A claim issuer is a contract that can issue claims for identities. All claim issuers are expected to implement
+the `function isClaimValid(address _identity, uint256 claimTopic, bytes calldata sig, bytes calldata data) view returns (bool)` method.
+
+### `function isClaimValid(address _identity, uint256 claimTopic, bytes calldata sig, bytes calldata data)`
+
+This method must perform all checks, depending on the claim issuer implementation, to return if a claim is valid
+(and still valid).
+
+The function takes many parameters (that should all be accessible to a verifier when determining if a claim is valid
+or not), but only some may be used by the claim issuer to return the validity. Usually, the `isClaimValid` method will
+verify that the signature of the claim `sig` matches the claim data hash (computed from `_identity`, `claimTopic` and
+`data`) and that the claim signature is not present in a revocation list.
+
+```solidity
+interface isClaimValid {
+    /**
+     * @dev Checks if a claim is valid.
+     * @param _identity the identity contract related to the claim
+     * @param claimTopic the claim topic of the claim
+     * @param sig the signature of the claim
+     * @param data the data field of the claim
+     * @return claimValid true if the claim is valid, false otherwise
+     */
+    function isClaimValid(
+        IIdentity _identity,
+        uint256 claimTopic,
+        bytes calldata sig,
+        bytes calldata data)
+    external view returns (bool);
 }
 ```
