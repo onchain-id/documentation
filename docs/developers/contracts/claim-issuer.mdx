@@ -64,7 +64,7 @@ The digest of the claim is a keccak256 hash of the subject identity address, cla
 The structure of a claim and the content of data is not enforced. `data` can be:
 - A clear text string (JSON stringified, an URL, a word, a sentence, ...).
 - The hash of the content of the claim.
-- Empty (Claim scheme `)
+- Empty
 
 When `data` contains the hash of the content of the claim, we recommend using the sha256 hash of the properties of the
 claim:
