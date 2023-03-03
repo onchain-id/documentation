@@ -53,15 +53,15 @@ export default function ReadContract({ abi }) {
     <div style={{ border: '1px solid purple', borderRadius: '15px', padding: '10px'}}>
       <h2>Read Contract</h2>
       {parsedInterface ? (
-        <form onSubmit={readContract}>
-          <input type="text" placeholder="Provider URL" value={providerUrl} onChange={e => setProviderUrl(e.target.value)} />
-          <input type="text" placeholder="Contract Address" value={contractAddress} onChange={e => setContractAddress(e.target.value)} />
+        <form onSubmit={readContract} style={{ display: "flex", flexDirection: "column" }}>
+          <input type="text" placeholder="Provider URL" value={providerUrl} onChange={e => setProviderUrl(e.target.value)} style={{ padding: "4px", margin: '4px' }} />
+          <input type="text" placeholder="Contract Address" value={contractAddress} onChange={e => setContractAddress(e.target.value)}  style={{ padding: "4px", margin: '4px' }} />
 
           {parsedInterface.fragments[0].inputs.map((input, index) => (
-            <input key={index} type="text" placeholder={input.name} value={args[index]} onChange={e => setArgs({ ...args, [index]: e.target.value})} />
+            <input key={index} type="text" placeholder={input.name} value={args[index]} onChange={e => setArgs({ ...args, [index]: e.target.value})}  style={{ padding: "4px", margin: '4px' }} />
           ))}
 
-          <input type="submit" value="Read" />
+          <input type="submit" value="Read" style={{ padding: "4px", margin: '4px' }} />
         </form>
       ) : (
         <p>Loading interactive component...</p>
