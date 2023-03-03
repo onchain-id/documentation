@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: Claim Issuer use-cases
 ---
 
@@ -86,6 +86,9 @@ Only a MANAGEMENT key can execute this method.
 The revocation is stored by keeping the claim signature in a mapping. This means this signature would never be valid
 again. The same claim issuer will never be able to issue the same claim with the same data for the same topic for the
 same identity address (because the signature would be identical to the one revoked).
+
+> The method `revokeClaim` by ID has been deprecated, as it depends on the identity contract to return the claim to be
+> revoked. This prevents the Claim Issuer from revoking a claim that was not added to an identity contract.
 
 ## Verification of a claim status
 
