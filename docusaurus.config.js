@@ -88,6 +88,7 @@ module.exports = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
+      additionalLanguages: ['solidity'],
     },
   },
   presets: [
@@ -112,4 +113,8 @@ module.exports = {
       },
     ],
   ],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 };

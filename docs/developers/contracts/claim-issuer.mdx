@@ -1,0 +1,117 @@
+---
+sidebar_position: 3
+title: Claim Issuer use-cases
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import CodeBlock from '@theme/CodeBlock';
+
+# Interact with claim issuers
+
+We provide an implementation of a Claim Issuer in the ONCHAINID repository. It supports signing claims using different
+keys and revoking claims. See [the claim issuer interface requirements](./interfaces.mdx#Claim-issuer) for more details
+on what functions are mandatory to implement for a Claim Issuer contract. The Claim Issuer we provide is also a full
+Identity, able to store claims for its address, and usage of the `execute` and `approve` methods.
+
+> :::tip
+>
+> The Identity SDK we provide offers helpers to interact with Claim Issuers and generate claims, see
+> the [Identity SDK](../sdk/intro.md) pages for more info.
+>
+> :::
+
+## Deployment
+
+Deploying a Claim Issuer using the example contract:
+
+```javascript
+const Onchainid = require('@onchain-id/solidity');
+const ClaimIssuer = new ethers.ContractFactory(Onchainid.ClaimIssuer.abi, Onchainid.ClaimIssuer.bytecode, signer);
+const claimIssuer = await ClaimIssuer.deploy(ownerAddress);
+```
+
+From the contract repository, it is also possible to use the convenient script with hardhat (make sure networks are
+configured in `hardhat.config.ts`, the claim issuer owner will be the first account defined for the selected network):
+
+```bash
+npx hardhat run scripts/deploy-claim-issuer.ts --network <network>
+```
+
+## Issuance of a claim
+
+Issuing a claim does NOT require interaction with the contracts. In the implementation we provide, the signature of the
+claim is enough to attest its origin.
+
+To issue a claim, the claim issuer must define the content of the claim, generate the digest of the claim, and sign it
+using a key authorized on the contrat for CLAIM purpose (purpose `3`) or MANAGEMENT.
+
+The digest of the claim is a keccak256 hash of the subject identity address, claim topic and claim data abi-encoded:
+
+<Tabs>
+  <TabItem value="solidity" label="Solidity" default>
+    <CodeBlock language="solidity">
+    bytes32 digest = keccak256(abi.encode(identity, topic, data));
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="javascript" label="Javascript">
+    <CodeBlock language="javascript">
+    const digest = ethers.utils.keccak256(ethers.utils.defaultAbiCoder.encode(['address', 'bytes32', 'bytes'], [identity, topic, data]));
+    </CodeBlock>
+  </TabItem>
+</Tabs>
+
+The structure of a claim and the content of data is not enforced. `data` can be:
+- A clear text string (JSON stringified, an URL, a word, a sentence, ...).
+- The hash of the content of the claim.
+- Empty
+
+When `data` contains the hash of the content of the claim, we recommend using the sha256 hash of the properties of the
+claim:
+
+```javascript
+ethers.utils.sha256(ethers.utils.toUtf8Bytes(JSON.stringify({
+  topic,
+  emissionDate,
+  privateData, // should include a unique random identifier.
+  publicData, // should include a unique random identifier.
+})));
+```
+
+## Revocation of a claim
+
+In the implementation we provide, the claim issuer can revoke a claim by calling the `revokeClaimBySignature` method.
+Only a MANAGEMENT key can execute this method.
+
+The revocation is stored by keeping the claim signature in a mapping. This means this signature would never be valid
+again. The same claim issuer will never be able to issue the same claim with the same data for the same topic for the
+same identity address (because the signature would be identical to the one revoked).
+
+> The method `revokeClaim` by ID has been deprecated, as it depends on the identity contract to return the claim to be
+> revoked. This prevents the Claim Issuer from revoking a claim that was not added to an identity contract.
+
+## Verification of a claim status
+
+To verify the validity of a claim, a verifier must call the `isClaimValid` method on the Claim Issuer contract.
+
+> :::danger
+>
+> Note that the `isClaimValid` method takes the claim `data` as an argument. As with the `addClaim` method, whatever
+> information is in the `data`, it will be public. Do NOT store sensitive information in the `data` field of a claim,
+> event encrypted. `data` should only include public information or hash of sensitive information, properly salted.
+>
+> :::
+
+<Tabs>
+  <TabItem value="solidity" label="Solidity" default>
+    <CodeBlock language="solidity">
+      bool isValid = claimIssuer.isClaimValid(identity, topic, data, signature);
+    </CodeBlock>
+  </TabItem>
+  <TabItem value="javascript" label="Javascript">
+    <CodeBlock language="javascript">
+      const claimIssuer = new ethers.Contract(claimIssuerAddress, ['function isClaimValid(address identity, uint256 claimTopic, bytes memory sig, bytes memory data) view returns (bool claimValid)'], provider);
+      const isValid = await claimIssuer.isClaimValid(identity, topic, data, signature);
+    </CodeBlock>
+  </TabItem>
+</Tabs>
