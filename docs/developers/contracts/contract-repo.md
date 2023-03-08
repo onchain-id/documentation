@@ -163,10 +163,11 @@ npx hardhat revoke --issuer <claim issuer address> --from <claim issuer manageme
 ### Deploy an identity as a proxy
 
 ```bash
-npx hardhat deploy-proxy --factory <factoryAddress> --from <deployer account> --managementKey <address of identity owner> --network <myNetwork/localhost>
+npx hardhat deploy-proxy --factory <factoryAddress> --from <deployer account> --key <ethereum address of identity owner> --network <myNetwork/localhost>
 ```
 
 - `factoryAddress` is the address of the factory contract (obtained by deploying a factory).
 - `deployer account` is the address of the account that will emit the transaction and pay gas.
-- `managementKey` is the address of the identity owner (ethereum address), will be set as a MANAGEMENT key on the
+- `ethereum address of identity owner` is the address of the identity owner (ethereum address), will be set as a MANAGEMENT key on the
   identity.
+- Optional: `--salt [salt]` to specify a salt for the proxy deployment, otherwise, the `key` will be used as the salt. 
