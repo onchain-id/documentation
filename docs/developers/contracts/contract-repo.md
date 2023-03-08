@@ -129,7 +129,7 @@ npx hardhat add-claim --identity <identity address> --from <identity CLAIM key> 
 - `identity address` is the address of the identity contract.
 - `identity CLAIM key` is the address of a CLAIM (OR MANAGEMENT) key on the identity (will emit the transaction and pay gas).
 - `claim` is the claim to add as a JSON string.
-  - `claim.type` is the claim type (use standard-defined type or custom one).
+  - `claim.topic` is the claim topic (use standard-defined topic or custom one).
   - `claim.scheme` is the claim scheme (use standard-defined scheme or custom one).
   - `claim.issuer` is the address of the claim issuer.
   - `claim.data` is the data of the claim.
