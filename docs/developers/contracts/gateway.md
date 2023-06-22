@@ -55,13 +55,14 @@ Once a user obtains their approval signature, they can deploy their ONCHAINID on
 the signer.
 
 ```solidity
-deployIdentity(address identityOwner, string memory salt, bytes calldata signature);
+deployIdentity(address identityOwner, string memory salt, uint256 signatureExpiry, bytes calldata signature);
 ```
 
 ```javascript
 await gateway.deployIdentity(
   managementKeyAddress,
   'customSalt',
+  signatureExpiry,
   signature,
 );
 ```
@@ -81,7 +82,8 @@ keccak256(
     abi.encode(
         "Authorize ONCHAINID deployment",
         managementKeyAddress,
-        salt
+        salt,
+        signatureExpiry,
     )
 ).toEthSignedMessageHash();
 ```
@@ -91,8 +93,13 @@ keccak256(
 ```javascript
 const digest = ethers.utils.keccak256(
     ethers.utils.defaultAbiCoder.encode(
-        ['string', 'address', 'string'],
-        ['Authorize ONCHAINID deployment', managementKeyAddress, 'saltToUse'],
+        ['string', 'address', 'string', 'uint256'],
+        [
+          'Authorize ONCHAINID deployment',
+          managementKeyAddress,
+          'saltToUse',
+          BigNumber.from(new Date().getTime()).div(1000).add(365 * 24 * 60 * 60), // expiry solidity timestamp (in seconds)
+        ],
     ),
 );
 const signature = await carolWallet.signMessage(
