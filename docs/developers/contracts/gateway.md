@@ -108,3 +108,5 @@ const signature = await carolWallet.signMessage(
     ),
 );
 ```
+
+> Setting the expiry to `0` will make the signature valid until explicitely revoked.
