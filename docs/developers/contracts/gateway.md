@@ -55,17 +55,19 @@ Once a user obtains their approval signature, they can deploy their ONCHAINID on
 the signer.
 
 ```solidity
-deployIdentity(address identityOwner, string memory salt, uint256 signatureExpiry, bytes calldata signature);
+deployIdentityWithSalt(address identityOwner, string memory salt, uint256 signatureExpiry, bytes calldata signature);
 ```
 
 ```javascript
-await gateway.deployIdentity(
+await gateway.deployIdentityWithSalt(
   managementKeyAddress,
   'customSalt',
   signatureExpiry,
   signature,
 );
 ```
+
+> To deploy an identity using the wallet a the salt, use the `deployIdentityForWallet(address identityOwner)` method.
 
 ## Specifications
 
@@ -109,4 +111,4 @@ const signature = await carolWallet.signMessage(
 );
 ```
 
-> Setting the expiry to `0` will make the signature valid until explicitely revoked.
+> Setting the expiry to `0` will make the signature valid until explicitly revoked.
