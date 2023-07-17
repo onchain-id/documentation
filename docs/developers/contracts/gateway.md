@@ -69,6 +69,12 @@ await gateway.deployIdentityWithSalt(
 
 > To deploy an identity using the wallet a the salt, use the `deployIdentityForWallet(address identityOwner)` method.
 
+> To deploy an identity using a custom salt and a specific list of management keys (other that the identity owner
+> address), use the `function deployIdentityWithSaltAndManagementKeys(address identityOwner, string memory salt,
+> bytes32[] calldata managementKeys, uint256 signatureExpiry, bytes calldata signature)` method.
+> **Note that the `identityOwner` address won't be added as a management key, only the keys specified in the
+> `managementKeys` array will.**
+
 ## Specifications
 
 ### Approval signature message content
@@ -112,3 +118,45 @@ const signature = await carolWallet.signMessage(
 ```
 
 > Setting the expiry to `0` will make the signature valid until explicitly revoked.
+
+For signatures used by the `deployIdentityWithSaltAndManagementKeys` method, the content is extendend with the list of
+management keys to use:
+
+```solidity
+import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
+
+using ECDSA for bytes32;
+
+keccak256(
+    abi.encode(
+        "Authorize ONCHAINID deployment",
+        identityOwner,
+        salt,
+        managementKeys,
+        signatureExpiry,
+    )
+).toEthSignedMessageHash();
+```
+
+```javascript
+const digest = ethers.utils.keccak256(
+    ethers.utils.defaultAbiCoder.encode(
+        ['string', 'address', 'string', 'bytes32[]', 'uint256'],
+        [
+          'Authorize ONCHAINID deployment',
+          managementKeyAddress,
+          'saltToUse',
+          [
+            ethers.utils.defaultAbiCoder.encode(['address'], [key1]),
+            ethers.utils.defaultAbiCoder.encode(['address'], [key2]),
+          ],
+          BigNumber.from(new Date().getTime()).div(1000).add(365 * 24 * 60 * 60), // expiry solidity timestamp (in seconds)
+        ],
+    ),
+);
+const signature = await carolWallet.signMessage(
+    ethers.utils.arrayify(
+        digest,
+    ),
+);
+```
