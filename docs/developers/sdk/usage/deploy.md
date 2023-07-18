@@ -13,7 +13,7 @@ deployed on the desired network.
 There are three differents ways and associated methods to deploy an ONCHAINID using a `Gateway`:
 - `deployUsingGatewayForWallet` deploys an identity for a given wallet address as a management key and as the salt. If
   the signer intends to deploy an identity for their own wallet, this is probably the method to use.
-- `deployUsingGatewayWithSaltAndKeys` deploys an identity for a given wallet using a custom salt and
+- `deployUsingGatewayWithSaltAndManagementKeys` deploys an identity for a given wallet using a custom salt and
   a list of keys to add to the identity. The identity owner won't be added as a management key, but key hashes listed
   as management keys keys will. This is useful if the signer wants to deploy an identity for a wallet for other keys
   than the wallet (for instance if it was lost) of with more than one management key.
@@ -87,6 +87,23 @@ const provider = ethers.getDefaultProvider('kovan');
 const signer = new ethers.Wallet('private key', provider);
 
 const tx = await IdentitySDK.Identity.deployUsingGatewayWithSalt({
+  gateway: gateway.address,
+  identityOwner: '0x...',
+  salt: 'saltToUse',
+  managementKeys: [
+    IdentitySDK.utils.encodeAndHash(['address'], ['0x... address of management key']),
+  ], 
+  signature: signature,
+  signatureExpiry: expiry,
+}, { signer });
+```
+
+```javascript
+const { IdentitySDK } = require('@onchain-id/identity-sdk');
+const provider = ethers.getDefaultProvider('kovan');
+const signer = new ethers.Wallet('private key', provider);
+
+const tx = await IdentitySDK.Identity.deployUsingGatewayWithSaltAndManagementKeys({
   gateway: gateway.address,
   identityOwner: '0x...',
   salt: 'saltToUse',
