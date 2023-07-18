@@ -21,7 +21,15 @@ There are three differents ways and associated methods to deploy an ONCHAINID us
 
 These methods triggers a creation of a contract, therefore they do not return the deployed identity but instead the
 transaction to be awaited. The created identity address can be retrieved in the events associated with the transaction
-(albeit it can be pre-computed using the CREATE2 method).
+(albeit it can be pre-computed using the CREATE2 method, conveniently accessible via the `Identity.computeDeploymentAddress({ factory, unprefixedSalt, implementationAuthority })` method).
+
+```javascript
+const expectedAddress = Identity.computeDeploymentAddress({
+  factory: '0x... Address of the factory contract - not the gateway contract.',
+  unprefixedSalt : 'custom salt or identity owner wallet',
+  implementationAuthorit: '0x... Address of the implementation authority contract used by the factory',
+});
+```
 
 Except the `deployUsingGatewayForWallet` that has no specific protection, the methods requires a signature from an
 signer approved and trusted by the Gateway to deploy an identity using a custom salt and/or with a list of management
