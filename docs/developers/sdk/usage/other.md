@@ -1,59 +1,10 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
 # Working with identities
 
 ## Generic operations
-
-### Deploy an identity
-
-The `Identity#deployNew()` method triggers a deploy transaction and return the deploying Identity, you can then wait `identity.deployed()` for the contract to be deployed. The key from the signer used to deploy the Identity will be added as a MANAGEMENT Key of the Identity, hence giving him a full access over the contract.
-
-```javascript
-const { IdentitySDK } = require('@onchain-id/identity-sdk');
-
-const provider = ethers.getDefaultProvider('kovan');
-
-const DEPLOY_PRIVATE_KEY = 'deploy_private_key';
-const deployWallet = new IdentitySDK.Providers.Wallet(DEPLOY_PRIVATE_KEY, provider);
-
-const MANAGEMENT_KEY = '0x...management key';
-
-(async () => {
-  // Deploy a new Identity
-  const identity = await IdentitySDK.Identity.deployNew({
-    implementationAuthority: IdentitySDK.constants.implementationAuthorities.kovan, // Or provide your own address.
-    managementKey: MANAGEMENT_KEY,
-  }, {
-    signer: deployWallet,
-  }).then(identity => identity.deployed());
-})();
-```
-
-> 💡 To deploy identities without using proxies or implementation authorities, please use the smart contract bytecodes and ABIs provided in the `@onchain-id/solidity` package. You'll also need a blockchain library, such as `ethers`.
-
-```typescript
-import ONCHAINID from "@onchain-id/solidity";
-import { ethers } from 'ethers';
-
-(async () => {
-	const provider = ethers.getDefaultProvider('kovan');
-	const signer = new ethers.Wallet('private key', provider);
-	
-	const identityFactory = new ethers.ContractFactory(
-		ONCHAINID.contracts.Identity.abi,
-		ONCHAINID.contracts.Identity.bytecode,
-		signer
-	);
-	const identity = await identityFactory.deploy(
-		await signer.getAddress(),
-		false,
-	);
-	// waiting for the contract to be deployed
-	await identity.deployed();
-})()
-```
 
 ### Load an Identity
 
