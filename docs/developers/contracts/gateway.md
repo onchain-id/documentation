@@ -67,7 +67,7 @@ await gateway.deployIdentityWithSalt(
 );
 ```
 
-> To deploy an identity using the wallet a the salt, use the `deployIdentityForWallet(address identityOwner)` method.
+> To deploy an identity using the wallet as the salt, use the `deployIdentityForWallet(address identityOwner)` method.
 
 > To deploy an identity using a custom salt and a specific list of management keys (other that the identity owner
 > address), use the `function deployIdentityWithSaltAndManagementKeys(address identityOwner, string memory salt,
