@@ -44,7 +44,7 @@ Issuing a claim does NOT require interaction with the contracts. In the implemen
 claim is enough to attest its origin.
 
 To issue a claim, the claim issuer must define the content of the claim, generate the digest of the claim, and sign it
-using a key authorized on the contrat for CLAIM purpose (purpose `3`) or MANAGEMENT.
+using a key authorized on the contract for CLAIM purpose (purpose `3`) or MANAGEMENT.
 
 The digest of the claim is a keccak256 hash of the subject identity address, claim topic and claim data abi-encoded:
 
