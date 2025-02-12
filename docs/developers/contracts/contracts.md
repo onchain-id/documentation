@@ -217,7 +217,7 @@ A claim is an information an issuer has about the identity holder. This contains
 
 - `topic`: A `uint256` number which represents the topic of the claim. (e.g. 1 KYC, 2 AML)
 - `scheme`: The scheme with which this claim SHOULD be verified or how it should be processed. Its a `uint256` for
-  different schemes. Refer to [claim constants](./../sdk/constants.md).
+  different schemes.
 - `issuer`: The `ClaimIssuer` contract address. The `key` used to sign the claim MUST be a `key` of Type `1` or `3`
   on the `ClaimIssuer` contract, if it is not the case the claim cannot be added to the ONCHAINID (check of claim
   validity on the `addClaim` function. if the key is not present anymore,
